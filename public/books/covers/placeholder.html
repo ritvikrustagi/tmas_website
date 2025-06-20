@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Cover Generator</title>
+    <style>
+        .book-cover {
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .calc-ab { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .calc-bc { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .physics-1 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .physics-c { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .amc { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .amc-strategies { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .author {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: auto;
+        }
+        
+        .logo {
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-cover calc-ab">
+        <div class="logo">TMAS ACADEMY</div>
+        <div class="title">ACE<br/>AP Calculus AB</div>
+        <div class="author">Ritvik Rustagi</div>
+    </div>
+    
+    <div class="book-cover calc-bc">
+        <div class="logo">TMAS ACADEMY</div>
+        <div class="title">ACE<br/>AP Calculus BC</div>
+        <div class="author">Ritvik Rustagi</div>
+    </div>
+    
+    <div class="book-cover physics-1">
+        <div class="logo">TMAS ACADEMY</div>
+        <div class="title">ACE<br/>AP Physics 1</div>
+        <div class="author">Ritvik Rustagi</div>
+    </div>
+    
+    <div class="book-cover physics-c">
+        <div class="logo">TMAS ACADEMY</div>
+        <div class="title">ACE<br/>AP Physics C<br/>Mechanics</div>
+        <div class="author">Ritvik Rustagi</div>
+    </div>
+    
+    <div class="book-cover amc">
+        <div class="logo">TMAS ACADEMY</div>
+        <div class="title">ACE<br/>The AMC 10/12</div>
+        <div class="author">Ritvik Rustagi</div>
+    </div>
+    
+    <div class="book-cover amc-strategies">
+        <div class="logo">TMAS ACADEMY</div>
+        <div class="title">AMC 10/12<br/>Key Strategies<br/>& Formulas</div>
+        <div class="author">Ritvik Rustagi</div>
+    </div>
+</body>
+</html> 
