@@ -46,9 +46,8 @@ export default function Community() {
               <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-8 shadow-lg">
                 <MessageCircle className="w-10 h-10 text-white" />
               </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
-                Join TMAS Academy's Discord
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                Join TMAS Academy&apos;s Discord
               </h2>
               
               <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed">
@@ -56,11 +55,10 @@ export default function Community() {
                 like AMC 10/12 & AIME. Participate in group study sessions and review sessions led 
                 by Ritvik Rustagi and others!
               </p>
-              
-              <Button 
+                <Button 
                 onClick={handleJoinDiscord}
                 size="lg"
-                className="bg-black text-white hover:bg-gray-800 px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+                className="bg-primary-gradient text-white hover:shadow-xl px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Join the Server

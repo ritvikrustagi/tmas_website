@@ -61,9 +61,8 @@ export default function Opportunities() {
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
             Opportunities at TMAS Academy
-          </h2>
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            We're looking for passionate individuals to join our mission. Help us create and share amazing 
+          </h2>          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            We&apos;re looking for passionate individuals to join our mission. Help us create and share amazing 
             educational content while building valuable experience and making a difference.
           </p>
         </AnimatedSection>
@@ -130,11 +129,10 @@ export default function Opportunities() {
               Join our team and help shape the future of educational content. 
               We offer mentorship, experience, and the chance to impact thousands of students.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">              <Button 
                 onClick={handleApply}
                 size="lg" 
-                className="bg-black text-white hover:bg-gray-800 px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+                className="bg-primary-gradient text-white hover:shadow-xl px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
               >
                 Apply Now / Learn More
               </Button>

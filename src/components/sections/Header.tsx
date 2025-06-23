@@ -6,11 +6,11 @@ import { Menu, X } from 'lucide-react'
 
 const navItems = [
   { href: '#hero', label: 'Home' },
-  { href: '#books', label: 'Free AP Books' },
-  { href: '#about-mission', label: 'Our Approach' },
-  { href: '#videos', label: 'Videos' },
+  { href: '#books', label: 'Free Books' },
+  { href: '#testimonials', label: 'Success Stories' },
+  { href: '#faq', label: 'FAQ' },
   { href: '#community', label: 'Community' },
-  { href: '#opportunities', label: 'Opportunities' },
+  { href: '#opportunities', label: 'Join Us' },
 ]
 
 export default function Header() {

@@ -119,11 +119,10 @@ export default function Hero() {
           <motion.div 
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
-          >
-            <Button 
+          >            <Button 
               onClick={handleScrollToBooks}
               size="lg"
-              className="bg-black text-white hover:bg-gray-800 px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+              className="bg-primary-gradient text-white hover:shadow-xl px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
             >
               Explore Free Books
             </Button>
@@ -132,7 +131,7 @@ export default function Hero() {
               variant="outline"
               size="lg"
               onClick={() => document.getElementById('community')?.scrollIntoView({ behavior: 'smooth' })}
-              className="border-black text-black hover:bg-gray-100 px-8 py-3 text-lg font-semibold rounded-lg"
+              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold rounded-lg"
             >
               Join Community
             </Button>

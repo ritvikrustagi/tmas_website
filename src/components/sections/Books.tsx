@@ -14,9 +14,10 @@ const books = [
     title: 'ACE AP Calculus AB',
     author: 'Ritvik Rustagi',
     description: 'Comprehensive coverage of AP Calculus AB topics with detailed explanations and practice problems.',
-    coverGradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    coverGradient: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
     pdfPath: '/books/ACE_AP_Calculus_AB_by_RitvikRustagi.pdf',
     badge: 'Popular',
+    badgeColor: 'bg-blue-100 text-blue-700',
     problems: '150+',
     pages: '280+',
     size: '29 MB'
@@ -26,9 +27,10 @@ const books = [
     title: 'ACE AP Calculus BC',
     author: 'Ritvik Rustagi',
     description: 'Master advanced calculus topics including series, parametric equations, and polar coordinates.',
-    coverGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    coverGradient: 'linear-gradient(135deg, #3b82f6 0%, #1e40af 100%)',
     pdfPath: '/books/ACE_AP_Calculus_BC_by_RitvikRustagi.pdf',
     badge: 'Advanced',
+    badgeColor: 'bg-blue-100 text-blue-700',
     problems: '200+',
     pages: '300+',
     size: '31 MB'
@@ -38,9 +40,10 @@ const books = [
     title: 'ACE AP Physics 1',
     author: 'Ritvik Rustagi',
     description: 'Fundamental physics concepts, problem-solving strategies, and exam preparation techniques.',
-    coverGradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    coverGradient: 'linear-gradient(135deg, #10b981 0%, #047857 100%)',
     pdfPath: '/books/ACE_AP_Physics_1_by_RitvikRustagi.pdf',
     badge: 'Essential',
+    badgeColor: 'bg-emerald-100 text-emerald-700',
     problems: '180+',
     pages: '270+',
     size: '28 MB'
@@ -50,9 +53,10 @@ const books = [
     title: 'ACE AP Physics C: Mechanics',
     author: 'Ritvik Rustagi',
     description: 'Calculus-based mechanics covering kinematics, dynamics, energy, and momentum.',
-    coverGradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+    coverGradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
     pdfPath: '/books/ACE_AP_Physics_C_Mech_by_RitvikRustagi.pdf',
     badge: 'Advanced',
+    badgeColor: 'bg-emerald-100 text-emerald-700',
     problems: '160+',
     pages: '300+',
     size: '31 MB'
@@ -62,9 +66,10 @@ const books = [
     title: 'ACE The AMC 10/12',
     author: 'Ritvik Rustagi',
     description: 'Competition math strategies, problem-solving techniques, and practice problems for AMC success.',
-    coverGradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
     pdfPath: '/books/ACE The AMC 10_12!.pdf',
     badge: 'Competition',
+    badgeColor: 'bg-amber-100 text-amber-700',
     problems: '300+',
     pages: '350+',
     size: '37 MB'
@@ -74,17 +79,17 @@ const books = [
     title: 'AMC 10/12 Key Strategies and Formulas',
     author: 'Ritvik Rustagi',
     description: 'Quick reference guide with essential formulas, strategies, and tips for AMC competitions.',
-    coverGradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
     pdfPath: '/books/AMC 10_12 Key Strategies and Formulas.pdf',
     badge: 'Quick Reference',
+    badgeColor: 'bg-amber-100 text-amber-700',
     problems: '50+',
     pages: '25+',
     size: '2.4 MB'
   }
 ]
 
-export default function Books() {
-  const handleViewBook = (pdfPath: string, bookTitle: string) => {
+export default function Books() {  const handleViewBook = (pdfPath: string) => {
     // Open the PDF in a new tab
     window.open(pdfPath, '_blank')
   }
@@ -102,9 +107,8 @@ export default function Books() {
   return (
     <section id="books" className="py-24">
       <div className="container">
-        <AnimatedSection className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
-            TMAS Academy's FREE Books
+        <AnimatedSection className="text-center mb-16">          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+            TMAS Academy&apos;s FREE Books
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Dive into our collection of meticulously crafted books, designed to align with College Board standards 
@@ -147,8 +151,7 @@ export default function Books() {
                     <CardDescription className="text-gray-600 font-medium">
                       Author: {book.author}
                     </CardDescription>
-                  </div>
-                  <Badge variant="secondary" className="ml-2 text-xs">
+                  </div>                  <Badge variant="secondary" className={`ml-2 text-xs ${book.badgeColor} border-0`}>
                     {book.badge}
                   </Badge>
                 </div>
@@ -170,11 +173,10 @@ export default function Books() {
                 </div>
               </CardContent>
 
-              <CardFooter className="flex gap-2">
-                <Button 
+              <CardFooter className="flex gap-2">                <Button 
                   variant="outline" 
                   className="flex-1 border-black text-black hover:bg-gray-100 group-hover:bg-black group-hover:text-white transition-colors"
-                  onClick={() => handleViewBook(book.pdfPath, book.title)}
+                  onClick={() => handleViewBook(book.pdfPath)}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View PDF
