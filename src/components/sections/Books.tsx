@@ -1,12 +1,13 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { BookOpen, ExternalLink, Download } from 'lucide-react'
+import { BookOpen, ExternalLink, Download, Eye } from 'lucide-react'
 import AnimatedSection from '@/components/ui-custom/AnimatedSection'
 import StaggeredGrid from '@/components/ui-custom/StaggeredGrid'
+import BookPreviewModal from '@/components/ui-custom/BookPreviewModal'
 
 const books = [
   {
@@ -89,7 +90,10 @@ const books = [
   }
 ]
 
-export default function Books() {  const handleViewBook = (pdfPath: string) => {
+export default function Books() {
+  const [previewBook, setPreviewBook] = useState<typeof books[0] | null>(null)
+
+  const handleViewBook = (pdfPath: string) => {
     // Open the PDF in a new tab
     window.open(pdfPath, '_blank')
   }
@@ -171,11 +175,18 @@ export default function Books() {  const handleViewBook = (pdfPath: string) => {
                   <span>{book.problems} problems</span>
                   <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
                 </div>
-              </CardContent>
-
-              <CardFooter className="flex gap-2">                <Button 
+              </CardContent>              <CardFooter className="flex gap-2">
+                <Button 
                   variant="outline" 
-                  className="flex-1 border-black text-black hover:bg-gray-100 group-hover:bg-black group-hover:text-white transition-colors"
+                  className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
+                  onClick={() => setPreviewBook(book)}
+                >
+                  <Eye className="w-4 h-4 mr-2" />
+                  Preview
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="flex-1 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
                   onClick={() => handleViewBook(book.pdfPath)}
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
@@ -184,7 +195,7 @@ export default function Books() {  const handleViewBook = (pdfPath: string) => {
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  className="hover:bg-gray-100"
+                  className="hover:bg-gray-100 dark:hover:bg-gray-800"
                   onClick={() => handleDownloadBook(book.pdfPath, book.title)}
                 >
                   <Download className="w-4 h-4" />
@@ -217,9 +228,17 @@ export default function Books() {  const handleViewBook = (pdfPath: string) => {
               <Download className="w-5 h-5 mr-2" />
               Download Complete Collection
             </Button>
-          </div>
-        </AnimatedSection>
+          </div>        </AnimatedSection>
       </div>
+
+      {/* Book Preview Modal */}
+      {previewBook && (
+        <BookPreviewModal
+          isOpen={!!previewBook}
+          onClose={() => setPreviewBook(null)}
+          book={previewBook}
+        />
+      )}
     </section>
   )
-} 
+}

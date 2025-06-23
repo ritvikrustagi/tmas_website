@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -57,11 +58,12 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
         <link rel="shortcut icon" href="/favicon.svg" />
-      </head>
-      <body
+      </head>      <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
