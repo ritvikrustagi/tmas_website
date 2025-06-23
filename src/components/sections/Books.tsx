@@ -113,6 +113,32 @@ const books = [
     problems: '180+',
     pages: '290+',
     size: '32 MB'
+  },
+  {
+    id: 9,
+    title: 'ACE AP Chemistry',
+    author: 'Ritvik Rustagi',
+    description: 'Thorough review of AP Chemistry topics, including practice problems and exam strategies.',
+    coverGradient: 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)',
+    pdfPath: '/books/ACE_AP_Chemistry_TMAS_Academy.pdf',
+    badge: 'Comprehensive',
+    badgeColor: 'bg-pink-100 text-pink-700',
+    problems: '210+',
+    pages: '340+',
+    size: '38 MB'
+  },
+  {
+    id: 10,
+    title: 'Free AP Computer Science Principles Review Book',
+    author: 'Ritvik Rustagi',
+    description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.',
+    coverGradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
+    pdfPath: '/books/Free_AP_Computer_Science_Principles_Review_Book.pdf',
+    badge: 'Essential',
+    badgeColor: 'bg-blue-100 text-blue-700',
+    problems: '160+',
+    pages: '250+',
+    size: '27 MB'
   }
 ]
 
