@@ -87,6 +87,32 @@ const books = [
     problems: '50+',
     pages: '25+',
     size: '2.4 MB'
+  },
+  {
+    id: 7,
+    title: 'ACE AP Biology',
+    author: 'Ritvik Rustagi',
+    description: 'Comprehensive coverage of AP Biology topics with detailed explanations and practice problems.',
+    coverGradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+    pdfPath: '/books/ACE_AP_Biology_Book.pdf',
+    badge: 'New',
+    badgeColor: 'bg-purple-100 text-purple-700',
+    problems: '200+',
+    pages: '320+',
+    size: '35 MB'
+  },
+  {
+    id: 8,
+    title: 'Free AP Statistics Review Book',
+    author: 'Ritvik Rustagi',
+    description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.',
+    coverGradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
+    pdfPath: '/books/Free_AP_Statistics_Review_Book.pdf',
+    badge: 'Essential',
+    badgeColor: 'bg-cyan-100 text-cyan-700',
+    problems: '180+',
+    pages: '290+',
+    size: '32 MB'
   }
 ]
 
