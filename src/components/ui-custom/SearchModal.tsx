@@ -5,6 +5,7 @@ import { Search, X, BookOpen, HelpCircle, Users, Briefcase } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { useTheme } from '@/contexts/ThemeContext'
+import { useRouter } from 'next/navigation'
 
 interface SearchResult {
   id: string
@@ -17,24 +18,24 @@ interface SearchResult {
 
 const searchData: SearchResult[] = [
   // Books
-  { id: 'calc-ab', title: 'ACE AP Calculus AB', description: 'Comprehensive coverage of AP Calculus AB topics', type: 'book', href: '#books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'calc-bc', title: 'ACE AP Calculus BC', description: 'Advanced calculus including series and parametric equations', type: 'book', href: '#books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'physics-1', title: 'ACE AP Physics 1', description: 'Fundamental physics concepts and problem-solving', type: 'book', href: '#books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'physics-c', title: 'ACE AP Physics C: Mechanics', description: 'Calculus-based mechanics', type: 'book', href: '#books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'amc-guide', title: 'ACE The AMC 10/12', description: 'Competition math strategies and practice problems', type: 'book', href: '#books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'amc-formulas', title: 'AMC 10/12 Key Strategies and Formulas', description: 'Quick reference guide for AMC competitions', type: 'book', href: '#books', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'calc-ab', title: 'ACE AP Calculus AB', description: 'Comprehensive coverage of AP Calculus AB topics', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'calc-bc', title: 'ACE AP Calculus BC', description: 'Advanced calculus including series and parametric equations', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'physics-1', title: 'ACE AP Physics 1', description: 'Fundamental physics concepts and problem-solving', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'physics-c', title: 'ACE AP Physics C: Mechanics', description: 'Calculus-based mechanics', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'amc-guide', title: 'ACE The AMC 10/12', description: 'Competition math strategies and practice problems', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'amc-formulas', title: 'AMC 10/12 Key Strategies and Formulas', description: 'Quick reference guide for AMC competitions', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
   
   // FAQ
-  { id: 'faq-free', title: 'Are the books really free?', description: 'Yes! All books are completely free to download', type: 'faq', href: '#faq', icon: <HelpCircle className="w-4 h-4" /> },
-  { id: 'faq-updates', title: 'How often are books updated?', description: 'Regular updates to reflect latest standards', type: 'faq', href: '#faq', icon: <HelpCircle className="w-4 h-4" /> },
-  { id: 'faq-discord', title: 'How to join Discord community?', description: 'Click the Join Discord button to access our server', type: 'faq', href: '#faq', icon: <HelpCircle className="w-4 h-4" /> },
-  { id: 'faq-tutoring', title: 'Do you offer tutoring?', description: 'Yes! Personalized tutoring sessions available', type: 'faq', href: '#faq', icon: <HelpCircle className="w-4 h-4" /> },
-  { id: 'faq-contribute', title: 'How can I contribute?', description: 'Join our team as tutor, developer, or content creator', type: 'faq', href: '#faq', icon: <HelpCircle className="w-4 h-4" /> },
+  { id: 'faq-free', title: 'Are the books really free?', description: 'Yes! All books are completely free to download', type: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4" /> },
+  { id: 'faq-updates', title: 'How often are books updated?', description: 'Regular updates to reflect latest standards', type: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4" /> },
+  { id: 'faq-discord', title: 'How to join Discord community?', description: 'Click the Join Discord button to access our server', type: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4" /> },
+  { id: 'faq-tutoring', title: 'Do you offer tutoring?', description: 'Yes! Personalized tutoring sessions available', type: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4" /> },
+  { id: 'faq-contribute', title: 'How can I contribute?', description: 'Join our team as tutor, developer, or content creator', type: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4" /> },
   
   // Sections
-  { id: 'community', title: 'Discord Community', description: 'Join 500+ students in our Discord server', type: 'section', href: '#community', icon: <Users className="w-4 h-4" /> },
-  { id: 'opportunities', title: 'Join Our Team', description: 'Opportunities for tutors, developers, and creators', type: 'section', href: '#opportunities', icon: <Briefcase className="w-4 h-4" /> },
-  { id: 'testimonials', title: 'Success Stories', description: 'Read testimonials from successful students', type: 'section', href: '#testimonials', icon: <Users className="w-4 h-4" /> },
+  { id: 'community', title: 'Discord Community', description: 'Join 500+ students in our Discord server', type: 'section', href: '/community', icon: <Users className="w-4 h-4" /> },
+  { id: 'opportunities', title: 'Join Our Team', description: 'Opportunities for tutors, developers, and creators', type: 'section', href: '/opportunities', icon: <Briefcase className="w-4 h-4" /> },
+  { id: 'testimonials', title: 'Success Stories', description: 'Read testimonials from successful students', type: 'section', href: '/testimonials', icon: <Users className="w-4 h-4" /> },
 ]
 
 export default function SearchModal() {
@@ -44,6 +45,7 @@ export default function SearchModal() {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
   const { theme } = useTheme()
+  const router = useRouter()
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -80,12 +82,8 @@ export default function SearchModal() {
     setResults(filteredResults.slice(0, 8))
     setSelectedIndex(0)
   }, [query])
-
   const handleResultClick = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+    router.push(href)
     setIsOpen(false)
     setQuery('')
   }
