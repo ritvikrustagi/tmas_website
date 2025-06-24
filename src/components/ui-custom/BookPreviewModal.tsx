@@ -191,11 +191,9 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
               >
                 <X className="w-5 h-5" />
               </Button>
-            </div>
-
-            {/* Content */}
-            <div className="flex h-[calc(90vh-200px)]">              {/* Preview Panel */}
-              <div className="flex-1 p-6 overflow-y-auto bg-gray-900 dark:bg-white">
+            </div>            {/* Content */}
+            <div className="flex flex-col md:flex-row h-[calc(90vh-200px)] md:h-[calc(90vh-200px)]">              {/* Preview Panel */}
+              <div className="flex-1 p-4 md:p-6 overflow-y-auto bg-gray-900 dark:bg-white min-h-[300px] md:min-h-0">
                 <h3 className="text-lg font-semibold text-white dark:text-gray-900 mb-4">
                   <Eye className="w-5 h-5 inline mr-2" />
                   Preview: {currentPreview.title}
@@ -224,7 +222,7 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
                   </ul>
                 </div>
               </div>              {/* Sidebar */}
-              <div className="w-80 border-l border-gray-200 dark:border-gray-700 p-6 bg-gray-800 dark:bg-gray-50">
+              <div className="w-full md:w-80 border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-700 p-6 bg-gray-800 dark:bg-gray-50">
                 <h4 className="font-semibold text-white dark:text-gray-900 mb-4">Book Details</h4>
                 
                 <div className="space-y-4 text-sm">
