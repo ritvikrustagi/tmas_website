@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -9,7 +10,21 @@ import AnimatedSection from '@/components/ui-custom/AnimatedSection'
 import StaggeredGrid from '@/components/ui-custom/StaggeredGrid'
 import BookPreviewModal from '@/components/ui-custom/BookPreviewModal'
 
-const books = [
+// Book slugs for routing
+export const bookSlugs: { [key: number]: string } = {
+  1: 'ap-calculus-ab',
+  2: 'ap-calculus-bc', 
+  3: 'ap-physics-1',
+  4: 'ap-physics-c',
+  5: 'amc-10-12',
+  6: 'amc-formulas',
+  7: 'ap-biology',
+  8: 'ap-statistics',
+  9: 'ap-chemistry',
+  10: 'ap-computer-science'
+}
+
+export const books = [
   {
     id: 1,
     title: 'ACE AP Calculus AB',
@@ -144,6 +159,7 @@ const books = [
 
 export default function Books() {
   const [previewBook, setPreviewBook] = useState<typeof books[0] | null>(null)
+  const router = useRouter()
 
   const handleViewBook = (pdfPath: string) => {
     // Open the PDF in a new tab
@@ -158,6 +174,16 @@ export default function Books() {
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
+  }
+
+  const handlePreviewBook = (book: typeof books[0]) => {
+    const slug = bookSlugs[book.id]
+    if (slug) {
+      router.push(`/books/${slug}`)
+    } else {
+      // Fallback to modal if no slug
+      setPreviewBook(book)
+    }
   }
 
   return (
@@ -231,7 +257,7 @@ export default function Books() {
                 <Button 
                   variant="outline" 
                   className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
-                  onClick={() => setPreviewBook(book)}
+                  onClick={() => handlePreviewBook(book)}
                 >
                   <Eye className="w-4 h-4 mr-2" />
                   Preview

@@ -18,13 +18,17 @@ interface SearchResult {
 
 const searchData: SearchResult[] = [
   // Books
-  { id: 'calc-ab', title: 'ACE AP Calculus AB', description: 'Comprehensive coverage of AP Calculus AB topics', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'calc-bc', title: 'ACE AP Calculus BC', description: 'Advanced calculus including series and parametric equations', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'physics-1', title: 'ACE AP Physics 1', description: 'Fundamental physics concepts and problem-solving', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'physics-c', title: 'ACE AP Physics C: Mechanics', description: 'Calculus-based mechanics', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'amc-guide', title: 'ACE The AMC 10/12', description: 'Competition math strategies and practice problems', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
-  { id: 'amc-formulas', title: 'AMC 10/12 Key Strategies and Formulas', description: 'Quick reference guide for AMC competitions', type: 'book', href: '/books', icon: <BookOpen className="w-4 h-4" /> },
-  
+  { id: 'calc-ab', title: 'ACE AP Calculus AB', description: 'Comprehensive coverage of AP Calculus AB topics', type: 'book', href: '/books/ap-calculus-ab', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'calc-bc', title: 'ACE AP Calculus BC', description: 'Advanced calculus including series and parametric equations', type: 'book', href: '/books/ap-calculus-bc', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'physics-1', title: 'ACE AP Physics 1', description: 'Fundamental physics concepts and problem-solving', type: 'book', href: '/books/ap-physics-1', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'physics-c', title: 'ACE AP Physics C: Mechanics', description: 'Calculus-based mechanics', type: 'book', href: '/books/ap-physics-c', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'amc-guide', title: 'ACE The AMC 10/12', description: 'Competition math strategies and practice problems', type: 'book', href: '/books/amc-10-12', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'amc-formulas', title: 'AMC 10/12 Key Strategies and Formulas', description: 'Quick reference guide for AMC competitions', type: 'book', href: '/books/amc-formulas', icon: <BookOpen className="w-4 h-4" /> },
+  { id: 'ap-bio', title: 'ACE AP Biology', description: 'Comprehensive coverage of AP Biology topics with detailed explanations and practice problems.', type: 'book', href: '/books/ap-biology', icon: <BookOpen className="w-4 h-4" />},
+  { id: 'ap-stats', title: 'AP Stats Review Book', description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.', type: 'book', href: '/books/ap-statistics', icon: <BookOpen className="w-4 h-4" />},
+  { id: 'ap-chem', title: 'AP Chemistry Review Book', description: 'Thorough review of AP Chemistry topics, including practice problems and exam strategies.', type: 'book', href: '/books/ap-chemistry', icon: <BookOpen className="w-4 h-4" />},
+  { id: 'ap-cs', title: 'AP CS Principles Book', description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.', type: 'book', href: '/books/ap-computer-science', icon: <BookOpen className="w-4 h-4" />},
+
   // FAQ
   { id: 'faq-free', title: 'Are the books really free?', description: 'Yes! All books are completely free to download', type: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4" /> },
   { id: 'faq-updates', title: 'How often are books updated?', description: 'Regular updates to reflect latest standards', type: 'faq', href: '/faq', icon: <HelpCircle className="w-4 h-4" /> },
