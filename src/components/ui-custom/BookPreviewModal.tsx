@@ -159,9 +159,8 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             className="glass-effect rounded-2xl border border-gray-200/50 shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
-          >
-            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+          >            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gray-800 dark:bg-white">
               <div className="flex items-center gap-4">
                 <div 
                   className="w-12 h-16 rounded-lg shadow-lg flex items-center justify-center text-white text-xs font-bold"
@@ -170,15 +169,15 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
                   {book.title.split(' ').slice(1, 3).join(' ')}
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                  <h2 className="text-xl font-bold text-white dark:text-gray-900">
                     {book.title}
                   </h2>
-                  <p className="text-gray-600 dark:text-gray-400">by {book.author}</p>
+                  <p className="text-gray-300 dark:text-gray-700">by {book.author}</p>
                   <div className="flex items-center gap-2 mt-1">
                     <span className={`text-xs px-2 py-1 rounded-full ${book.badgeColor} border-0`}>
                       {book.badge}
                     </span>
-                    <span className="text-xs text-gray-500 dark:text-gray-400">
+                    <span className="text-xs text-gray-400 dark:text-gray-600">
                       {book.pages} pages • {book.size}
                     </span>
                   </div>
@@ -195,88 +194,78 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
             </div>
 
             {/* Content */}
-            <div className="flex h-[calc(90vh-200px)]">
-              {/* Preview Panel */}
-              <div className="flex-1 p-6 overflow-y-auto">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+            <div className="flex h-[calc(90vh-200px)]">              {/* Preview Panel */}
+              <div className="flex-1 p-6 overflow-y-auto bg-gray-900 dark:bg-white">
+                <h3 className="text-lg font-semibold text-white dark:text-gray-900 mb-4">
                   <Eye className="w-5 h-5 inline mr-2" />
                   Preview: {currentPreview.title}
-                </h3>
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-6 font-mono text-sm">
+                </h3><div className="bg-gray-900 dark:bg-white border border-gray-700 dark:border-gray-200 rounded-lg p-6 font-mono text-sm">
                   {currentPreview.content.map((line, index) => (
                     <div 
                       key={index} 
                       className={`${
-                        line.startsWith('•') ? 'ml-4 text-blue-600 dark:text-blue-400' :
-                        line.startsWith('Example') || line.startsWith('Practice') ? 'font-bold text-gray-900 dark:text-gray-100 mt-4' :
-                        line.includes('≡') || line.includes('=') ? 'ml-4 text-green-600 dark:text-green-400' :
-                        'text-gray-700 dark:text-gray-300'
+                        line.startsWith('•') ? 'ml-4 text-blue-300 dark:text-blue-700 font-medium' :
+                        line.startsWith('Example') || line.startsWith('Practice') ? 'font-bold text-white dark:text-gray-900 mt-4' :
+                        line.includes('≡') || line.includes('=') ? 'ml-4 text-green-300 dark:text-green-700 font-medium' :
+                        'text-gray-200 dark:text-gray-800'
                       } ${line === '' ? 'h-2' : ''}`}
                     >
                       {line || '\u00A0'}
                     </div>
                   ))}
-                </div>
-                
-                <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                  <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">What&apos;s included:</h4>
-                  <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
+                </div>                
+                <div className="mt-6 p-4 bg-blue-900/30 dark:bg-blue-50 border border-blue-700 dark:border-blue-300 rounded-lg">
+                  <h4 className="font-semibold text-blue-100 dark:text-blue-900 mb-2">What&apos;s included:</h4>
+                  <ul className="text-sm text-blue-100 dark:text-blue-800 space-y-1">
                     <li>• {book.problems} practice problems with solutions</li>
                     <li>• Comprehensive theory and examples</li>
                     <li>• Exam-style questions and strategies</li>
                     <li>• Regular updates and improvements</li>
                   </ul>
                 </div>
-              </div>
-
-              {/* Sidebar */}
-              <div className="w-80 border-l border-gray-200 dark:border-gray-700 p-6">
-                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4">Book Details</h4>
+              </div>              {/* Sidebar */}
+              <div className="w-80 border-l border-gray-200 dark:border-gray-700 p-6 bg-gray-800 dark:bg-gray-50">
+                <h4 className="font-semibold text-white dark:text-gray-900 mb-4">Book Details</h4>
                 
                 <div className="space-y-4 text-sm">
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400">Pages:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-gray-100">{book.pages}</span>
+                    <span className="text-gray-300 dark:text-gray-700">Pages:</span>
+                    <span className="ml-2 font-medium text-white dark:text-gray-900">{book.pages}</span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400">Problems:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-gray-100">{book.problems}</span>
+                    <span className="text-gray-300 dark:text-gray-700">Problems:</span>
+                    <span className="ml-2 font-medium text-white dark:text-gray-900">{book.problems}</span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400">File Size:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-gray-100">{book.size}</span>
+                    <span className="text-gray-300 dark:text-gray-700">File Size:</span>
+                    <span className="ml-2 font-medium text-white dark:text-gray-900">{book.size}</span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400">Format:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-gray-100">PDF</span>
+                    <span className="text-gray-300 dark:text-gray-700">Format:</span>
+                    <span className="ml-2 font-medium text-white dark:text-gray-900">PDF</span>
                   </div>
                   <div>
-                    <span className="text-gray-600 dark:text-gray-400">Price:</span>
-                    <span className="ml-2 font-bold text-green-600 dark:text-green-400">Free</span>
+                    <span className="text-gray-300 dark:text-gray-700">Price:</span>
+                    <span className="ml-2 font-bold text-green-400 dark:text-green-600">Free</span>
                   </div>
-                </div>
-
-                <div className="mt-8 space-y-3">
+                </div><div className="mt-8 space-y-3">
                   <Button
                     onClick={handleViewPDF}
-                    className="w-full bg-primary-gradient text-white hover:shadow-lg"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-lg hover:shadow-xl transition-all"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Open Full PDF
                   </Button>
-                  
-                  <Button
+                    <Button
                     onClick={handleDownload}
                     variant="outline"
-                    className="w-full border-gray-300 dark:border-gray-600"
+                    className="w-full border-2 border-gray-600 dark:border-gray-300 hover:border-gray-500 dark:hover:border-gray-400 text-white dark:text-gray-900 hover:bg-gray-700 dark:hover:bg-gray-50 font-medium"
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
                   </Button>
-                </div>
-
-                <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg">
-                  <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                </div><div className="mt-6 p-4 bg-gray-900 dark:bg-white border border-gray-600 dark:border-gray-200 rounded-lg">
+                  <p className="text-sm text-gray-300 dark:text-gray-700 leading-relaxed">
                     This book is part of TMAS Academy&apos;s free educational resources. 
                     You can download, print, and use it for personal study purposes.
                   </p>

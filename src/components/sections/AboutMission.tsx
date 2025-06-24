@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { Separator } from '@/components/ui/separator'
 import AnimatedSection from '@/components/ui-custom/AnimatedSection'
 import StaggeredGrid from '@/components/ui-custom/StaggeredGrid'
 
