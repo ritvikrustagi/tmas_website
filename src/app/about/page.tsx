@@ -100,53 +100,6 @@ export default function About() {
                   </div>
                 </Card>
               </div>
-
-              {/* Call to Action */}
-              <Card 
-                className="p-8 shadow-xl max-w-2xl mx-auto mb-16"
-                style={{
-                  backgroundColor: isDark ? '#1f2937' : '#ffffff',
-                  borderColor: isDark ? '#4b5563' : '#e5e7eb'
-                }}
-              >
-                <h3 
-                  className="text-2xl font-bold mb-4"
-                  style={{ color: isDark ? '#ffffff' : '#1f2937' }}
-                >
-                  Ready to Start Learning?
-                </h3>
-                <p 
-                  className="mb-6"
-                  style={{ color: isDark ? '#d1d5db' : '#4b5563' }}
-                >
-                  Explore our free educational resources and join thousands of students who have improved their understanding of mathematics and physics.
-                </p>
-                <div className="flex flex-wrap gap-4 justify-center">
-                  <Button 
-                    asChild
-                    className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-3"
-                  >
-                    <Link href="/books">
-                      View Free Books
-                    </Link>
-                  </Button>
-                  <Button 
-                    asChild
-                    variant="outline"
-                    className="font-semibold px-8 py-3"
-                    style={{
-                      borderWidth: '2px',
-                      borderColor: isDark ? '#4b5563' : '#d1d5db',
-                      backgroundColor: 'transparent',
-                      color: isDark ? '#ffffff' : '#1f2937'
-                    }}
-                  >
-                    <Link href="/community">
-                      Join Community
-                    </Link>
-                  </Button>
-                </div>
-              </Card>
             </div>
 
             {/* Team Sections */}
@@ -356,6 +309,54 @@ export default function About() {
               </div>
             </div>
           </div>
+          <br></br>
+          <br></br>
+          {/* Call to Action */}
+              <Card 
+                className="p-8 shadow-xl max-w-2xl mx-auto mb-16"
+                style={{
+                  backgroundColor: isDark ? '#1f2937' : '#ffffff',
+                  borderColor: isDark ? '#4b5563' : '#e5e7eb'
+                }}
+              >
+                <h3 
+                  className="text-2xl font-bold mb-4"
+                  style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                >
+                  Ready to Start Learning?
+                </h3>
+                <p 
+                  className="mb-6"
+                  style={{ color: isDark ? '#d1d5db' : '#4b5563' }}
+                >
+                  Explore our free educational resources and join thousands of students who have improved their understanding of mathematics and physics.
+                </p>
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Button 
+                    asChild
+                    className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-semibold px-8 py-3"
+                  >
+                    <Link href="/books">
+                      View Free Books
+                    </Link>
+                  </Button>
+                  <Button 
+                    asChild
+                    variant="outline"
+                    className="font-semibold px-8 py-3"
+                    style={{
+                      borderWidth: '2px',
+                      borderColor: isDark ? '#4b5563' : '#d1d5db',
+                      backgroundColor: 'transparent',
+                      color: isDark ? '#ffffff' : '#1f2937'
+                    }}
+                  >
+                    <Link href="/community">
+                      Join Community
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
         </div>
       </main>
 
