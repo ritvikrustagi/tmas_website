@@ -20,9 +20,9 @@ export default function Home() {
         <AboutMission />
         <Books />
         <Testimonials />
-        <FAQ />
         <Community />
         <Opportunities />
+        <FAQ />
       </main>
       <Footer />
       <FloatingActionButton />

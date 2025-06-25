@@ -118,7 +118,7 @@ export const books = [
   },
   {
     id: 8,
-    title: 'Free AP Statistics Review Book',
+    title: 'AP Statistics Review Book',
     author: 'Ritvik Rustagi',
     description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.',
     coverGradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
@@ -144,7 +144,7 @@ export const books = [
   },
   {
     id: 10,
-    title: 'Free AP Computer Science Principles Review Book',
+    title: 'AP Computer Science Principles Review Book',
     author: 'Ritvik Rustagi',
     description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.',
     coverGradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
@@ -200,7 +200,7 @@ export default function Books() {
         </AnimatedSection>
 
         {/* Books Grid with Staggered Animation */}
-        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {books.map((book) => (
             <Card 
               key={book.id} 

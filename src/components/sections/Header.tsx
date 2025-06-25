@@ -11,9 +11,9 @@ import { usePathname } from 'next/navigation'
 
 const navItems = [
   { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
   { href: '/books', label: 'Free Books' },
   { href: '/testimonials', label: 'Success Stories' },
-  { href: '/faq', label: 'FAQ' },
   { href: '/community', label: 'Community' },
   { href: '/opportunities', label: 'Join Us' },
 ]
