@@ -4,6 +4,7 @@ import React from 'react'
 import { X, Download, ExternalLink, Eye } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import { useTheme } from '@/contexts/ThemeContext'
 
 interface BookPreviewModalProps {
   isOpen: boolean
@@ -24,6 +25,9 @@ interface BookPreviewModalProps {
 }
 
 export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewModalProps) {
+  const { theme } = useTheme()
+  const isDark = theme === 'dark'
+
   const handleViewPDF = () => {
     window.open(book.pdfPath, '_blank')
     onClose()
@@ -160,7 +164,13 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
             className="glass-effect rounded-2xl border border-gray-200/50 shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >            {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+            <div 
+              className="flex items-center justify-between p-6 border-b shadow-lg"
+              style={{
+                backgroundColor: isDark ? '#1f2937' : '#ffffff',
+                borderBottomColor: isDark ? '#4b5563' : '#e5e7eb'
+              }}
+            >
               <div className="flex items-center gap-4">
                 <div 
                   className="w-12 h-16 rounded-lg shadow-lg flex items-center justify-center text-white text-xs font-bold"
@@ -169,15 +179,21 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
                   {book.title.split(' ').slice(1, 3).join(' ')}
                 </div>
                 <div>
-                  <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+                  <h2 
+                    className="text-xl font-bold"
+                    style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                  >
                     {book.title}
                   </h2>
-                  <p className="text-gray-700 dark:text-gray-300">by {book.author}</p>
+                  <p style={{ color: isDark ? '#d1d5db' : '#374151' }}>by {book.author}</p>
                   <div className="flex items-center gap-2 mt-1">
                     <span className={`text-xs px-2 py-1 rounded-full ${book.badgeColor} border-0`}>
                       {book.badge}
                     </span>
-                    <span className="text-xs text-gray-600 dark:text-gray-400">
+                    <span 
+                      className="text-xs"
+                      style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                    >
                       {book.pages} pages • {book.size}
                     </span>
                   </div>
@@ -193,28 +209,61 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
               </Button>
             </div>            {/* Content */}
             <div className="flex flex-col md:flex-row h-[calc(90vh-200px)] md:h-[calc(90vh-200px)]">              {/* Preview Panel */}
-              <div className="flex-1 p-4 md:p-6 overflow-y-auto bg-white dark:bg-gray-900 min-h-[300px] md:min-h-0">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+              <div 
+                className="flex-1 p-4 md:p-6 overflow-y-auto min-h-[300px] md:min-h-0"
+                style={{ backgroundColor: isDark ? '#111827' : '#f9fafb' }}
+              >
+                <h3 
+                  className="text-lg font-semibold mb-4"
+                  style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                >
                   <Eye className="w-5 h-5 inline mr-2" />
                   Preview: {currentPreview.title}
-                </h3><div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-6 font-mono text-sm">
+                </h3>
+
+                <div 
+                  className="border rounded-lg p-6 font-mono text-sm"
+                  style={{
+                    backgroundColor: isDark ? '#1f2937' : '#ffffff',
+                    borderColor: isDark ? '#4b5563' : '#e5e7eb'
+                  }}
+                >
                   {currentPreview.content.map((line, index) => (
                     <div 
                       key={index} 
-                      className={`${
-                        line.startsWith('•') ? 'ml-4 text-blue-700 dark:text-blue-300 font-medium' :
-                        line.startsWith('Example') || line.startsWith('Practice') ? 'font-bold text-gray-900 dark:text-white mt-4' :
-                        line.includes('≡') || line.includes('=') ? 'ml-4 text-green-700 dark:text-green-300 font-medium' :
-                        'text-gray-800 dark:text-gray-200'
-                      } ${line === '' ? 'h-2' : ''}`}
+                      className={`${line === '' ? 'h-2' : ''}`}
+                      style={{
+                        marginLeft: line.startsWith('•') || line.includes('≡') || line.includes('=') ? '16px' : '0',
+                        fontWeight: line.startsWith('Example') || line.startsWith('Practice') ? 'bold' : 
+                                   line.startsWith('•') || line.includes('≡') || line.includes('=') ? '500' : 'normal',
+                        marginTop: line.startsWith('Example') || line.startsWith('Practice') ? '16px' : '0',
+                        color: line.startsWith('•') ? (isDark ? '#93c5fd' : '#1d4ed8') :
+                               line.startsWith('Example') || line.startsWith('Practice') ? (isDark ? '#ffffff' : '#1f2937') :
+                               line.includes('≡') || line.includes('=') ? (isDark ? '#86efac' : '#16a34a') :
+                               isDark ? '#e5e7eb' : '#374151'
+                      }}
                     >
                       {line || '\u00A0'}
                     </div>
                   ))}
                 </div>                
-                <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 border border-blue-300 dark:border-blue-700 rounded-lg">
-                  <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2">What&apos;s included:</h4>
-                  <ul className="text-sm text-blue-800 dark:text-blue-100 space-y-1">
+                <div 
+                  className="mt-6 p-4 border rounded-lg"
+                  style={{
+                    backgroundColor: isDark ? '#1e3a8a' : '#dbeafe',
+                    borderColor: isDark ? '#3b82f6' : '#93c5fd'
+                  }}
+                >
+                  <h4 
+                    className="font-semibold mb-2"
+                    style={{ color: isDark ? '#dbeafe' : '#1e3a8a' }}
+                  >
+                    What&apos;s included:
+                  </h4>
+                  <ul 
+                    className="text-sm space-y-1"
+                    style={{ color: isDark ? '#dbeafe' : '#1e40af' }}
+                  >
                     <li>• {book.problems} practice problems with solutions</li>
                     <li>• Comprehensive theory and examples</li>
                     <li>• Exam-style questions and strategies</li>
@@ -222,29 +271,65 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
                   </ul>
                 </div>
               </div>              {/* Sidebar */}
-              <div className="w-full md:w-80 border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-700 p-6 bg-gray-50 dark:bg-gray-800">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Book Details</h4>
+              <div 
+                className="w-full md:w-80 border-t md:border-t-0 md:border-l p-6"
+                style={{
+                  backgroundColor: isDark ? '#374151' : '#f3f4f6',
+                  borderColor: isDark ? '#4b5563' : '#e5e7eb'
+                }}
+              >
+                <h4 
+                  className="font-semibold mb-4"
+                  style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                >
+                  Book Details
+                </h4>
                 
                 <div className="space-y-4 text-sm">
                   <div>
-                    <span className="text-gray-700 dark:text-gray-300">Pages:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-white">{book.pages}</span>
+                    <span style={{ color: isDark ? '#d1d5db' : '#4b5563' }}>Pages:</span>
+                    <span 
+                      className="ml-2 font-medium"
+                      style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                    >
+                      {book.pages}
+                    </span>
                   </div>
                   <div>
-                    <span className="text-gray-700 dark:text-gray-300">Problems:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-white">{book.problems}</span>
+                    <span style={{ color: isDark ? '#d1d5db' : '#4b5563' }}>Problems:</span>
+                    <span 
+                      className="ml-2 font-medium"
+                      style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                    >
+                      {book.problems}
+                    </span>
                   </div>
                   <div>
-                    <span className="text-gray-700 dark:text-gray-300">File Size:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-white">{book.size}</span>
+                    <span style={{ color: isDark ? '#d1d5db' : '#4b5563' }}>File Size:</span>
+                    <span 
+                      className="ml-2 font-medium"
+                      style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                    >
+                      {book.size}
+                    </span>
                   </div>
                   <div>
-                    <span className="text-gray-700 dark:text-gray-300">Format:</span>
-                    <span className="ml-2 font-medium text-gray-900 dark:text-white">PDF</span>
+                    <span style={{ color: isDark ? '#d1d5db' : '#4b5563' }}>Format:</span>
+                    <span 
+                      className="ml-2 font-medium"
+                      style={{ color: isDark ? '#ffffff' : '#1f2937' }}
+                    >
+                      PDF
+                    </span>
                   </div>
                   <div>
-                    <span className="text-gray-700 dark:text-gray-300">Price:</span>
-                    <span className="ml-2 font-bold text-green-600 dark:text-green-400">Free</span>
+                    <span style={{ color: isDark ? '#d1d5db' : '#4b5563' }}>Price:</span>
+                    <span 
+                      className="ml-2 font-bold"
+                      style={{ color: isDark ? '#4ade80' : '#16a34a' }}
+                    >
+                      Free
+                    </span>
                   </div>
                 </div><div className="mt-8 space-y-3">
                   <Button
@@ -257,13 +342,28 @@ export default function BookPreviewModal({ isOpen, onClose, book }: BookPreviewM
                     <Button
                     onClick={handleDownload}
                     variant="outline"
-                    className="w-full border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 font-medium"
+                    className="w-full font-medium"
+                    style={{
+                      borderWidth: '2px',
+                      borderColor: isDark ? '#4b5563' : '#d1d5db',
+                      backgroundColor: 'transparent',
+                      color: isDark ? '#ffffff' : '#1f2937'
+                    }}
                   >
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
                   </Button>
-                </div><div className="mt-6 p-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-600 rounded-lg">
-                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                </div>                <div 
+                  className="mt-6 p-4 border rounded-lg"
+                  style={{
+                    backgroundColor: isDark ? '#1f2937' : '#ffffff',
+                    borderColor: isDark ? '#4b5563' : '#e5e7eb'
+                  }}
+                >
+                  <p 
+                    className="text-sm leading-relaxed"
+                    style={{ color: isDark ? '#d1d5db' : '#4b5563' }}
+                  >
                     This book is part of TMAS Academy&apos;s free educational resources. 
                     You can download, print, and use it for personal study purposes.
                   </p>
