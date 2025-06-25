@@ -5,12 +5,19 @@ import { Button } from '@/components/ui/button'
 import { MessageCircle, Users, BookOpen, Trophy, Calendar } from 'lucide-react'
 import AnimatedSection from '@/components/ui-custom/AnimatedSection'
 import StaggeredGrid from '@/components/ui-custom/StaggeredGrid'
+import { useTheme } from '@/contexts/ThemeContext'
 
 export default function Community() {
+  const { theme } = useTheme()
+  
   const handleJoinDiscord = () => {
     // Open the actual Discord invite link
-    window.open('https://discord.com/invite/u8YhZcDF?utm_source=Discord%20Widget&utm_medium=Connect', '_blank')
+    window.open('https://discord.com/invite/N6FqMxYn?utm_source=Discord%20Widget&utm_medium=Connect', '_blank')
   }
+
+  // Discord server ID extracted from your invite link
+  // Note: You may need to enable the widget in your Discord server settings
+  const discordServerId = "1019082642794229870" // Extracted from your invite
 
   const communityFeatures = [
     {
@@ -55,15 +62,29 @@ export default function Community() {
                 like AMC 10/12 & AIME. Participate in group study sessions and review sessions led 
                 by Ritvik Rustagi and others!
               </p>
-                <Button 
-                onClick={handleJoinDiscord}
-                size="lg"
-                className="bg-primary-gradient text-white hover:shadow-xl px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Join the Server
-              </Button>
               
+              {/* Official Discord Widget */}
+              <div className="mt-12 flex justify-center">
+                <div 
+                  className="rounded-xl shadow-lg overflow-hidden border"
+                  style={{
+                    backgroundColor: theme === 'dark' ? '#2f3136' : '#ffffff',
+                    borderColor: theme === 'dark' ? '#4f545c' : '#e5e7eb'
+                  }}
+                >
+                  <iframe
+                    src={`https://discord.com/widget?id=${discordServerId}&theme=${theme === 'dark' ? 'dark' : 'light'}`}
+                    width="350"
+                    height="500"
+                    allowTransparency={true}
+                    frameBorder="0"
+                    sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+                    title="Discord Server Widget"
+                    className="block"
+                  />
+                </div>
+              </div>
+
               {/* Community Stats */}
               <div className="mt-12 grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
                 <div className="p-4">

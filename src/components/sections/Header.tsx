@@ -7,6 +7,7 @@ import SearchModal from '@/components/ui-custom/SearchModal'
 import DarkModeToggle from '@/components/ui-custom/DarkModeToggle'
 import { useTheme } from '@/contexts/ThemeContext'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
@@ -48,13 +49,14 @@ export default function Header() {
       >
         <div className="flex items-center justify-between">          {/* Logo */}
           <div className="logo">
-            <h1 className={`font-bold tracking-tight transition-all duration-300 ${
-              isScrolled ? 'text-lg' : 'text-xl'
-            }`}
-            style={{ color: theme === 'dark' ? '#ffffff' : '#000000' }}
-            >
-              TMAS Academy
-            </h1>
+            <Image 
+              src="/header_banner.png" 
+              alt="TMAS Academy"
+              width={isScrolled ? 80 : 100}
+              height={isScrolled ? 20 : 25}
+              className="transition-all duration-300"
+              priority
+            />
           </div>          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
             {navItems.map((item) => (
