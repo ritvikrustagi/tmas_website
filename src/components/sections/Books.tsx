@@ -200,11 +200,11 @@ export default function Books() {
         </AnimatedSection>
 
         {/* Books Grid with Staggered Animation */}
-        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {books.map((book) => (
             <Card 
               key={book.id} 
-              className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200"
+              className="glass-card flex h-full flex-col border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
             >
               <CardHeader>
                 {/* Book Cover Image */}
@@ -239,7 +239,7 @@ export default function Books() {
                 </div>
               </CardHeader>
 
-              <CardContent>
+              <CardContent className="flex-1">
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   {book.description}
                 </p>
@@ -253,32 +253,40 @@ export default function Books() {
                   <span>{book.problems} problems</span>
                   <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
                 </div>
-              </CardContent>              <CardFooter className="flex gap-2">
-                <Button 
-                  variant="outline" 
-                  className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
+              </CardContent>              
+             <CardFooter className="grid w-full grid-cols-[1fr_auto] gap-2 px-4 py-3">
+              <div className="grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 gap-2">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full min-w-0 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
                   onClick={() => handlePreviewBook(book)}
                 >
                   <Eye className="w-4 h-4 mr-2" />
                   Preview
                 </Button>
-                <Button 
-                  variant="outline" 
-                  className="flex-1 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full min-w-0 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
                   onClick={() => handleViewBook(book.pdfPath)}
                 >
-                  <ExternalLink className="w-4 h-4 mr-2" />
+                  <ExternalLink className="w-4 h-4" />
                   View PDF
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800"
-                  onClick={() => handleDownloadBook(book.pdfPath, book.title)}
-                >
-                  <Download className="w-4 h-4" />
-                </Button>
-              </CardFooter>
+              </div>
+
+              <Button
+                size="sm"
+                variant="ghost"
+                className="justify-self-end hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => handleDownloadBook(book.pdfPath, book.title)}
+              >
+                <Download className="w-4 h-4" />
+              </Button>
+            </CardFooter>
+
             </Card>
           ))}
         </StaggeredGrid>
