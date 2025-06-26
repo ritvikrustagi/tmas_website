@@ -6,7 +6,8 @@ import Header from '@/components/sections/Header'
 import Footer from '@/components/sections/Footer'
 import FloatingActionButton from '@/components/ui-custom/FloatingActionButton'
 import Breadcrumbs from '@/components/ui-custom/Breadcrumbs'
-import BookPreviewModal from '@/components/ui-custom/BookPreviewModal'
+import BookPreviewContent from '@/components/ui-custom/BookPreviewContent'
+import YouTubeVideoSection from '@/components/ui-custom/YouTubeVideoSection'
 import { books } from '@/components/sections/Books'
 
 // Mapping of slugs to book IDs
@@ -42,7 +43,6 @@ export default function BookPreviewPage() {
   const params = useParams()
   const router = useRouter()
   const [book, setBook] = useState<typeof books[0] | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const slug = params.slug as string
@@ -52,7 +52,6 @@ export default function BookPreviewPage() {
       const foundBook = books.find(b => b.id === bookId)
       if (foundBook) {
         setBook(foundBook)
-        setIsModalOpen(true)
       } else {
         // Book ID exists but book not found, redirect to books page
         router.replace('/books')
@@ -62,12 +61,6 @@ export default function BookPreviewPage() {
       router.replace('/books')
     }
   }, [params.slug, router])
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false)
-    // Navigate back to books page when modal is closed
-    router.push('/books')
-  }
 
   if (!book) {
     return (
@@ -91,29 +84,25 @@ export default function BookPreviewPage() {
       <Header />
       <Breadcrumbs />
       <main className="pt-20">
-        {/* This page will immediately show the modal */}
         <div className="container py-12">
-          <div className="text-center">
+          <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               {book.title}
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 mb-8">
-              Preview and download this book from TMAS Academy
+            <p className="text-gray-600 dark:text-gray-400">
+              Complete learning resources with book preview and video lectures
             </p>
           </div>
+          
+          {/* Book Preview Content */}
+          <BookPreviewContent book={book} />
+          
+          {/* YouTube Video Section */}
+          <YouTubeVideoSection bookId={book.id} bookTitle={book.title} />
         </div>
       </main>
       <Footer />
       <FloatingActionButton />
-      
-      {/* Book Preview Modal */}
-      {book && (
-        <BookPreviewModal
-          isOpen={isModalOpen}
-          onClose={handleCloseModal}
-          book={book}
-        />
-      )}
     </div>
   )
 }

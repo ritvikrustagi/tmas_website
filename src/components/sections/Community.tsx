@@ -66,7 +66,7 @@ export default function Community() {
               {/* Official Discord Widget */}
               <div className="mt-12 flex justify-center">
                 <div 
-                  className="rounded-xl shadow-lg overflow-hidden border"
+                  className="rounded-xl shadow-lg overflow-hidden border w-full max-w-sm mx-auto"
                   style={{
                     backgroundColor: theme === 'dark' ? '#2f3136' : '#ffffff',
                     borderColor: theme === 'dark' ? '#4f545c' : '#e5e7eb'
@@ -74,13 +74,13 @@ export default function Community() {
                 >
                   <iframe
                     src={`https://discord.com/widget?id=${discordServerId}&theme=${theme === 'dark' ? 'dark' : 'light'}`}
-                    width="350"
+                    width="100%"
                     height="500"
-                    allowTransparency={true}
                     frameBorder="0"
                     sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
                     title="Discord Server Widget"
-                    className="block"
+                    className="block min-w-0"
+                    style={{ maxWidth: '100%' }}
                   />
                 </div>
               </div>

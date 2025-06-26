@@ -200,7 +200,7 @@ export default function Books() {
         </AnimatedSection>
 
         {/* Books Grid with Staggered Animation */}
-        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {books.map((book) => (
             <Card 
               key={book.id} 
@@ -282,31 +282,6 @@ export default function Books() {
             </Card>
           ))}
         </StaggeredGrid>
-
-        {/* Call to Action */}
-        <AnimatedSection className="text-center mt-16" delay={0.8}>
-          <div className="glass-card p-8 rounded-xl inline-block">
-            <h3 className="text-2xl font-semibold text-black mb-4">
-              Download All Books
-            </h3>
-            <p className="text-gray-700 mb-6 max-w-md">
-              Get instant access to our complete collection of AP and competition prep books. 
-              Always free, always updated.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-black text-white hover:bg-gray-800"
-              onClick={() => {
-                // Open all books in new tabs
-                books.forEach(book => {
-                  setTimeout(() => window.open(book.pdfPath, '_blank'), 100)
-                })
-              }}
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download Complete Collection
-            </Button>
-          </div>        </AnimatedSection>
       </div>
 
       {/* Book Preview Modal */}
