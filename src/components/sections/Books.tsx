@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { BookOpen, ExternalLink, Download, Eye } from 'lucide-react'
+import { BookOpen, ExternalLink, Download, Eye, ArrowRight } from 'lucide-react'
 import AnimatedSection from '@/components/ui-custom/AnimatedSection'
 import StaggeredGrid from '@/components/ui-custom/StaggeredGrid'
 import BookPreviewModal from '@/components/ui-custom/BookPreviewModal'
@@ -22,6 +23,10 @@ export const bookSlugs: { [key: number]: string } = {
   8: 'ap-statistics',
   9: 'ap-chemistry',
   10: 'ap-computer-science'
+}
+
+interface BooksProps {
+  showAll?: boolean
 }
 
 export const books = [
@@ -157,9 +162,21 @@ export const books = [
   }
 ]
 
-export default function Books() {
+export default function Books({ showAll = true }: BooksProps) {
   const [previewBook, setPreviewBook] = useState<typeof books[0] | null>(null)
   const router = useRouter()
+
+  // Limit books based on screen size if showAll is false
+  const getDisplayBooks = () => {
+    if (showAll) return books
+    
+    // For homepage: show 3 books on small/large screens, 4 books on medium screens
+    // Small: 3 books (1x3), Medium: 4 books (2x2), Large: 3 books (3x1)
+    // We take 4 books and use CSS to hide the 4th book on small/large screens
+    return books.slice(0, 4)
+  }
+  
+  const displayBooks = getDisplayBooks()
 
   const handleViewBook = (pdfPath: string) => {
     // Open the PDF in a new tab
@@ -201,10 +218,12 @@ export default function Books() {
 
         {/* Books Grid with Staggered Animation */}
         <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {books.map((book) => (
+          {displayBooks.map((book, index) => (
             <Card 
               key={book.id} 
-              className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200"
+              className={`glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200 ${
+                !showAll && index === 3 ? 'hidden md:block lg:hidden' : ''
+              }`}
             >
               <CardHeader>
                 {/* Book Cover Image */}
@@ -282,6 +301,21 @@ export default function Books() {
             </Card>
           ))}
         </StaggeredGrid>
+
+        {/* View More Books Button - only show on homepage */}
+        {!showAll && (
+          <AnimatedSection className="text-center mt-12" delay={0.6}>
+            <Link href="/books">
+              <Button 
+                size="lg" 
+                className="bg-primary-gradient text-white hover:shadow-xl px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
+              >
+                View More Books
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </AnimatedSection>
+        )}
       </div>
 
       {/* Book Preview Modal */}

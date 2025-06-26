@@ -10,7 +10,7 @@ export default function BooksPage() {
       <Header />
       <Breadcrumbs />
       <main className="pt-20">
-        <Books />
+        <Books showAll={true} />
       </main>
       <Footer />
       <FloatingActionButton />

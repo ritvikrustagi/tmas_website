@@ -18,7 +18,7 @@ export default function Home() {
       <main className="pt-20">
         <Hero />
         <AboutMission />
-        <Books />
+        <Books showAll={false} />
         <Testimonials />
         <Community />
         <Opportunities />
