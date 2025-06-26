@@ -30,14 +30,12 @@ export default function Footer() {
                 ritvikrustagi7@gmail.com
               </a>
             </div>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="flex items-center justify-center gap-6 mb-8">
+          </div>          {/* Social Media Links */}
+          <div className="flex items-center justify-center gap-4 mb-8 flex-wrap">
             <Button 
               variant="ghost" 
               size="sm"
-              className="flex items-center gap-2 hover:bg-gray-100"
+              className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => window.open('https://www.youtube.com/@tmasacademy', '_blank')}
             >
               <Youtube className="w-5 h-5 text-red-600" />
@@ -47,7 +45,7 @@ export default function Footer() {
             <Button 
               variant="ghost" 
               size="sm"
-              className="flex items-center gap-2 hover:bg-gray-100"
+              className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => window.open('https://discord.com/invite/u8YhZcDF?utm_source=Discord%20Widget&utm_medium=Connect', '_blank')}
             >
               <MessageCircle className="w-5 h-5 text-indigo-600" />
@@ -57,7 +55,7 @@ export default function Footer() {
             <Button 
               variant="ghost" 
               size="sm"
-              className="flex items-center gap-2 hover:bg-gray-100"
+              className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => window.open('https://www.linkedin.com/company/tmas-academy/', '_blank')}
             >
               <Linkedin className="w-5 h-5 text-blue-600" />
@@ -67,7 +65,7 @@ export default function Footer() {
             <Button 
               variant="ghost" 
               size="sm"
-              className="flex items-center gap-2 hover:bg-gray-100"
+              className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800"
               onClick={() => window.open('https://www.instagram.com/tmasacademy/', '_blank')}
             >
               <Instagram className="w-5 h-5 text-pink-600" />

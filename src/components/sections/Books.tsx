@@ -1,22 +1,39 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { BookOpen, ExternalLink, Download } from 'lucide-react'
+import { BookOpen, ExternalLink, Download, Eye } from 'lucide-react'
 import AnimatedSection from '@/components/ui-custom/AnimatedSection'
 import StaggeredGrid from '@/components/ui-custom/StaggeredGrid'
+import BookPreviewModal from '@/components/ui-custom/BookPreviewModal'
 
-const books = [
+// Book slugs for routing
+export const bookSlugs: { [key: number]: string } = {
+  1: 'ap-calculus-ab',
+  2: 'ap-calculus-bc', 
+  3: 'ap-physics-1',
+  4: 'ap-physics-c',
+  5: 'amc-10-12',
+  6: 'amc-formulas',
+  7: 'ap-biology',
+  8: 'ap-statistics',
+  9: 'ap-chemistry',
+  10: 'ap-computer-science'
+}
+
+export const books = [
   {
     id: 1,
     title: 'ACE AP Calculus AB',
     author: 'Ritvik Rustagi',
     description: 'Comprehensive coverage of AP Calculus AB topics with detailed explanations and practice problems.',
-    coverGradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+    coverGradient: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
     pdfPath: '/books/ACE_AP_Calculus_AB_by_RitvikRustagi.pdf',
     badge: 'Popular',
+    badgeColor: 'bg-blue-100 text-blue-700',
     problems: '150+',
     pages: '280+',
     size: '29 MB'
@@ -26,9 +43,10 @@ const books = [
     title: 'ACE AP Calculus BC',
     author: 'Ritvik Rustagi',
     description: 'Master advanced calculus topics including series, parametric equations, and polar coordinates.',
-    coverGradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+    coverGradient: 'linear-gradient(135deg, #3b82f6 0%, #1e40af 100%)',
     pdfPath: '/books/ACE_AP_Calculus_BC_by_RitvikRustagi.pdf',
     badge: 'Advanced',
+    badgeColor: 'bg-blue-100 text-blue-700',
     problems: '200+',
     pages: '300+',
     size: '31 MB'
@@ -38,9 +56,10 @@ const books = [
     title: 'ACE AP Physics 1',
     author: 'Ritvik Rustagi',
     description: 'Fundamental physics concepts, problem-solving strategies, and exam preparation techniques.',
-    coverGradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    coverGradient: 'linear-gradient(135deg, #10b981 0%, #047857 100%)',
     pdfPath: '/books/ACE_AP_Physics_1_by_RitvikRustagi.pdf',
     badge: 'Essential',
+    badgeColor: 'bg-emerald-100 text-emerald-700',
     problems: '180+',
     pages: '270+',
     size: '28 MB'
@@ -50,9 +69,10 @@ const books = [
     title: 'ACE AP Physics C: Mechanics',
     author: 'Ritvik Rustagi',
     description: 'Calculus-based mechanics covering kinematics, dynamics, energy, and momentum.',
-    coverGradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+    coverGradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
     pdfPath: '/books/ACE_AP_Physics_C_Mech_by_RitvikRustagi.pdf',
     badge: 'Advanced',
+    badgeColor: 'bg-emerald-100 text-emerald-700',
     problems: '160+',
     pages: '300+',
     size: '31 MB'
@@ -62,9 +82,10 @@ const books = [
     title: 'ACE The AMC 10/12',
     author: 'Ritvik Rustagi',
     description: 'Competition math strategies, problem-solving techniques, and practice problems for AMC success.',
-    coverGradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
     pdfPath: '/books/ACE The AMC 10_12!.pdf',
     badge: 'Competition',
+    badgeColor: 'bg-amber-100 text-amber-700',
     problems: '300+',
     pages: '350+',
     size: '37 MB'
@@ -74,17 +95,73 @@ const books = [
     title: 'AMC 10/12 Key Strategies and Formulas',
     author: 'Ritvik Rustagi',
     description: 'Quick reference guide with essential formulas, strategies, and tips for AMC competitions.',
-    coverGradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
     pdfPath: '/books/AMC 10_12 Key Strategies and Formulas.pdf',
     badge: 'Quick Reference',
+    badgeColor: 'bg-amber-100 text-amber-700',
     problems: '50+',
     pages: '25+',
     size: '2.4 MB'
+  },
+  {
+    id: 7,
+    title: 'ACE AP Biology',
+    author: 'Ritvik Rustagi',
+    description: 'Comprehensive coverage of AP Biology topics with detailed explanations and practice problems.',
+    coverGradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+    pdfPath: '/books/ACE_AP_Biology_Book.pdf',
+    badge: 'New',
+    badgeColor: 'bg-purple-100 text-purple-700',
+    problems: '200+',
+    pages: '320+',
+    size: '35 MB'
+  },
+  {
+    id: 8,
+    title: 'AP Statistics Review Book',
+    author: 'Ritvik Rustagi',
+    description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.',
+    coverGradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
+    pdfPath: '/books/Free_AP_Statistics_Review_Book.pdf',
+    badge: 'Essential',
+    badgeColor: 'bg-cyan-100 text-cyan-700',
+    problems: '180+',
+    pages: '290+',
+    size: '32 MB'
+  },
+  {
+    id: 9,
+    title: 'ACE AP Chemistry',
+    author: 'Ritvik Rustagi',
+    description: 'Thorough review of AP Chemistry topics, including practice problems and exam strategies.',
+    coverGradient: 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)',
+    pdfPath: '/books/ACE_AP_Chemistry_TMAS_Academy.pdf',
+    badge: 'Comprehensive',
+    badgeColor: 'bg-pink-100 text-pink-700',
+    problems: '210+',
+    pages: '340+',
+    size: '38 MB'
+  },
+  {
+    id: 10,
+    title: 'AP Computer Science Principles Review Book',
+    author: 'Ritvik Rustagi',
+    description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.',
+    coverGradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
+    pdfPath: '/books/Free_AP_Computer_Science_Principles_Review_Book.pdf',
+    badge: 'Essential',
+    badgeColor: 'bg-blue-100 text-blue-700',
+    problems: '160+',
+    pages: '250+',
+    size: '27 MB'
   }
 ]
 
 export default function Books() {
-  const handleViewBook = (pdfPath: string, bookTitle: string) => {
+  const [previewBook, setPreviewBook] = useState<typeof books[0] | null>(null)
+  const router = useRouter()
+
+  const handleViewBook = (pdfPath: string) => {
     // Open the PDF in a new tab
     window.open(pdfPath, '_blank')
   }
@@ -99,12 +176,21 @@ export default function Books() {
     document.body.removeChild(link)
   }
 
+  const handlePreviewBook = (book: typeof books[0]) => {
+    const slug = bookSlugs[book.id]
+    if (slug) {
+      router.push(`/books/${slug}`)
+    } else {
+      // Fallback to modal if no slug
+      setPreviewBook(book)
+    }
+  }
+
   return (
     <section id="books" className="py-24">
       <div className="container">
-        <AnimatedSection className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
-            TMAS Academy's FREE Books
+        <AnimatedSection className="text-center mb-16">          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+            TMAS Academy&apos;s FREE Books
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Dive into our collection of meticulously crafted books, designed to align with College Board standards 
@@ -114,11 +200,11 @@ export default function Books() {
         </AnimatedSection>
 
         {/* Books Grid with Staggered Animation */}
-        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {books.map((book) => (
             <Card 
               key={book.id} 
-              className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200"
+              className="glass-card flex h-full flex-col border border-gray-200 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2"
             >
               <CardHeader>
                 {/* Book Cover Image */}
@@ -147,14 +233,13 @@ export default function Books() {
                     <CardDescription className="text-gray-600 font-medium">
                       Author: {book.author}
                     </CardDescription>
-                  </div>
-                  <Badge variant="secondary" className="ml-2 text-xs">
+                  </div>                  <Badge variant="secondary" className={`ml-2 text-xs ${book.badgeColor} border-0`}>
                     {book.badge}
                   </Badge>
                 </div>
               </CardHeader>
 
-              <CardContent>
+              <CardContent className="flex-1">
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   {book.description}
                 </p>
@@ -168,26 +253,40 @@ export default function Books() {
                   <span>{book.problems} problems</span>
                   <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
                 </div>
-              </CardContent>
-
-              <CardFooter className="flex gap-2">
-                <Button 
-                  variant="outline" 
-                  className="flex-1 border-black text-black hover:bg-gray-100 group-hover:bg-black group-hover:text-white transition-colors"
-                  onClick={() => handleViewBook(book.pdfPath, book.title)}
+              </CardContent>              
+             <CardFooter className="grid w-full grid-cols-[1fr_auto] gap-2 px-4 py-3">
+              <div className="grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 gap-2">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full min-w-0 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
+                  onClick={() => handlePreviewBook(book)}
                 >
-                  <ExternalLink className="w-4 h-4 mr-2" />
+                  <Eye className="w-4 h-4 mr-2" />
+                  Preview
+                </Button>
+
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full min-w-0 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+                  onClick={() => handleViewBook(book.pdfPath)}
+                >
+                  <ExternalLink className="w-4 h-4" />
                   View PDF
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  className="hover:bg-gray-100"
-                  onClick={() => handleDownloadBook(book.pdfPath, book.title)}
-                >
-                  <Download className="w-4 h-4" />
-                </Button>
-              </CardFooter>
+              </div>
+
+              <Button
+                size="sm"
+                variant="ghost"
+                className="justify-self-end hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => handleDownloadBook(book.pdfPath, book.title)}
+              >
+                <Download className="w-4 h-4" />
+              </Button>
+            </CardFooter>
+
             </Card>
           ))}
         </StaggeredGrid>
@@ -215,9 +314,17 @@ export default function Books() {
               <Download className="w-5 h-5 mr-2" />
               Download Complete Collection
             </Button>
-          </div>
-        </AnimatedSection>
+          </div>        </AnimatedSection>
       </div>
+
+      {/* Book Preview Modal */}
+      {previewBook && (
+        <BookPreviewModal
+          isOpen={!!previewBook}
+          onClose={() => setPreviewBook(null)}
+          book={previewBook}
+        />
+      )}
     </section>
   )
-} 
+}
