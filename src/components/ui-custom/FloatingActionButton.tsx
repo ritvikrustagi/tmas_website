@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { MessageCircle, BookOpen, ChevronUp, X } from 'lucide-react'
+import { MessageCircle, BookOpen, ChevronUp, X, Youtube } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function FloatingActionButton() {
@@ -21,6 +21,11 @@ export default function FloatingActionButton() {
 
   const handleDiscordClick = () => {
     window.open('https://discord.com/invite/tmas-academy-1019082642794229870', '_blank')
+    setIsOpen(false)
+  }
+
+  const handleYouTubeClick = () => {
+    window.open('https://www.youtube.com/@tmasacademy', '_blank')
     setIsOpen(false)
   }
 
@@ -64,11 +69,26 @@ export default function FloatingActionButton() {
               </Button>
             </motion.div>
 
-            {/* Books Button */}
+            {/* YouTube Button */}
             <motion.div
               initial={{ x: 100 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.2 }}
+            >
+              <Button
+                onClick={handleYouTubeClick}
+                className="bg-red-600 hover:bg-red-700 text-white shadow-lg hover:shadow-xl h-12 px-4 rounded-full flex items-center gap-2 group"
+              >
+                <Youtube className="w-5 h-5" />
+                <span className="font-medium">YouTube</span>
+              </Button>
+            </motion.div>
+
+            {/* Books Button */}
+            <motion.div
+              initial={{ x: 100 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.3 }}
             >
               <Button
                 onClick={handleBooksClick}
@@ -83,7 +103,7 @@ export default function FloatingActionButton() {
             <motion.div
               initial={{ x: 100 }}
               animate={{ x: 0 }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.4 }}
             >
               <Button
                 onClick={handleScrollToTop}
