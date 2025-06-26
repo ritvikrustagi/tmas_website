@@ -46,7 +46,7 @@ export default function Footer() {
               variant="ghost" 
               size="sm"
               className="flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-gray-800"
-              onClick={() => window.open('https://discord.com/invite/u8YhZcDF?utm_source=Discord%20Widget&utm_medium=Connect', '_blank')}
+              onClick={() => window.open('https://discord.com/invite/tmas-academy-1019082642794229870', '_blank')}
             >
               <MessageCircle className="w-5 h-5 text-indigo-600" />
               <span>Discord</span>

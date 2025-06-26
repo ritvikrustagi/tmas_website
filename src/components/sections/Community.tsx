@@ -12,7 +12,7 @@ export default function Community() {
   
   const handleJoinDiscord = () => {
     // Open the actual Discord invite link
-    window.open('https://discord.com/invite/N6FqMxYn?utm_source=Discord%20Widget&utm_medium=Connect', '_blank')
+    window.open('https://discord.com/invite/tmas-academy-1019082642794229870', '_blank')
   }
 
   // Discord server ID extracted from your invite link

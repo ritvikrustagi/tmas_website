@@ -20,7 +20,7 @@ export default function FloatingActionButton() {
   }, [])
 
   const handleDiscordClick = () => {
-    window.open('https://discord.com/invite/u8YhZcDF?utm_source=Discord%20Widget&utm_medium=Connect', '_blank')
+    window.open('https://discord.com/invite/tmas-academy-1019082642794229870', '_blank')
     setIsOpen(false)
   }
 

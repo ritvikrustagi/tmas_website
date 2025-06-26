@@ -178,7 +178,7 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
-                onClick={() => window.open('https://discord.com/invite/u8YhZcDF?utm_source=Discord%20Widget&utm_medium=Connect', '_blank')}
+                onClick={() => window.open('https://discord.com/invite/tmas-academy-1019082642794229870', '_blank')}
                 className="px-6 py-3 bg-primary-gradient text-white font-medium rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200 border-0"
               >
                 Ask in Discord
