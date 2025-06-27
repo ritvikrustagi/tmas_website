@@ -8,6 +8,7 @@ import FloatingActionButton from '@/components/ui-custom/FloatingActionButton'
 import Breadcrumbs from '@/components/ui-custom/Breadcrumbs'
 import BookPreviewContent from '@/components/ui-custom/BookPreviewContent'
 import YouTubeVideoSection from '@/components/ui-custom/YouTubeVideoSection'
+import AdditionalResources from '@/components/ui-custom/AdditionalResources'
 import { books } from '@/components/sections/Books'
 
 // Mapping of slugs to book IDs
@@ -99,6 +100,9 @@ export default function BookPreviewPage() {
           
           {/* YouTube Video Section */}
           <YouTubeVideoSection bookId={book.id} bookTitle={book.title} />
+          
+          {/* Additional Resources Section */}
+          <AdditionalResources bookId={book.id} />
         </div>
       </main>
       <Footer />

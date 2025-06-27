@@ -41,8 +41,7 @@ export default function StaggeredGrid({
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.5,
-        ease: [0.25, 0.25, 0, 1]
+        duration: 0.5
       }
     }
   }
