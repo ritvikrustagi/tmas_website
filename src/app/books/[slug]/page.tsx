@@ -6,6 +6,7 @@ import Header from '@/components/sections/Header'
 import Footer from '@/components/sections/Footer'
 import FloatingActionButton from '@/components/ui-custom/FloatingActionButton'
 import Breadcrumbs from '@/components/ui-custom/Breadcrumbs'
+import PrerequisitesSection from '@/components/ui-custom/PrerequisitesSection'
 import BookPreviewContent from '@/components/ui-custom/BookPreviewContent'
 import YouTubeVideoSection from '@/components/ui-custom/YouTubeVideoSection'
 import AdditionalResources from '@/components/ui-custom/AdditionalResources'
@@ -94,6 +95,9 @@ export default function BookPreviewPage() {
               Complete learning resources with book preview and video lectures
             </p>
           </div>
+          
+          {/* Prerequisites Section */}
+          <PrerequisitesSection bookId={book.id} />
           
           {/* Book Preview Content */}
           <BookPreviewContent book={book} />
