@@ -10,6 +10,7 @@ import PrerequisitesSection from '@/components/ui-custom/PrerequisitesSection'
 import BookPreviewContent from '@/components/ui-custom/BookPreviewContent'
 import YouTubeVideoSection from '@/components/ui-custom/YouTubeVideoSection'
 import AdditionalResources from '@/components/ui-custom/AdditionalResources'
+import BookmarkButton from '@/components/ui-custom/BookmarkButton'
 import { books } from '@/components/sections/Books'
 
 // Mapping of slugs to book IDs
@@ -85,6 +86,16 @@ export default function BookPreviewPage() {
     <div className="min-h-screen">
       <Header />
       <Breadcrumbs />
+      
+      {/* Bookmark Button */}
+      {book && (
+        <BookmarkButton 
+          bookId={book.id} 
+          bookTitle={book.title} 
+          pdfPath={book.pdfPath} 
+        />
+      )}
+      
       <main className="pt-20">
         <div className="container py-12">
           <div className="text-center mb-8">
