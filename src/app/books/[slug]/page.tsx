@@ -107,12 +107,12 @@ export default function BookPreviewPage() {
             </p>
           </div>
           
-          {/* Prerequisites Section */}
-          <PrerequisitesSection bookId={book.id} />
-          
           {/* Book Preview Content */}
           <BookPreviewContent book={book} />
           
+          {/* Prerequisites Section */}
+          <PrerequisitesSection bookId={book.id} />
+
           {/* YouTube Video Section */}
           <YouTubeVideoSection bookId={book.id} bookTitle={book.title} />
           

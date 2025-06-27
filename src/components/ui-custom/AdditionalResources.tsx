@@ -22,12 +22,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Calculus AB Premium",
             description: "Comprehensive review with practice tests and detailed explanations",
-            url: "https://www.amazon.com/Barrons-AP-Calculus-Premium-2024/dp/1506287895"
+            url: "https://www.amazon.ca/AP-Calculus-Premium-2025-Comprehensive/dp/1506291686/"
           },
           {
             title: "Princeton Review AP Calculus AB Prep",
             description: "Strategic approach with proven techniques and practice questions",
-            url: "https://www.amazon.com/Princeton-Review-Calculus-Premium-Prep/dp/0593516734"
+            url: "https://www.penguinrandomhouse.com/books/775357/princeton-review-ap-calculus-ab-premium-prep-12th-edition-by-the-princeton-review-and-david-khan/"
           },
           {
             title: "5 Steps to a 5: AP Calculus AB",
@@ -89,12 +89,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Calculus BC Premium",
             description: "Comprehensive review including BC-specific topics",
-            url: "https://www.amazon.com/Barrons-AP-Calculus-Premium-2024/dp/1506287909"
+            url: "https://www.amazon.ca/AP-Calculus-Premium-2025-Comprehensive/dp/1506291686/"
           },
           {
             title: "Princeton Review AP Calculus BC Prep",
             description: "Strategic approach with BC-specific content",
-            url: "https://www.amazon.com/Princeton-Review-Calculus-Premium-Prep/dp/0593516742"
+            url: "https://www.penguinrandomhouse.com/books/775358/princeton-review-ap-calculus-bc-premium-prep-12th-edition-by-the-princeton-review-and-david-khan/"
           },
           {
             title: "5 Steps to a 5: AP Calculus BC",
@@ -156,12 +156,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Physics 1 Premium",
             description: "Comprehensive review with practice tests and detailed explanations",
-            url: "https://www.amazon.com/Barrons-AP-Physics-Premium-2024/dp/1506287917"
+            url: "https://www.amazon.ca/AP-Physics-Premium-2025-Comprehensive/dp/1506291643"
           },
           {
             title: "Princeton Review AP Physics 1 Prep",
             description: "Strategic approach with proven techniques and practice questions",
-            url: "https://www.amazon.com/Princeton-Review-Physics-Premium-Prep/dp/0593516750"
+            url: "https://penguinrandomhousehighereducation.com/book/?isbn=9780593517697"
           },
           {
             title: "5 Steps to a 5: AP Physics 1",
@@ -223,12 +223,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Physics C Premium",
             description: "Comprehensive review with calculus-based physics",
-            url: "https://www.amazon.com/Barrons-AP-Physics-Premium-2024/dp/1506287925"
+            url: "https://www.amazon.ca/AP-Physics-Premium-Eighth-Comprehensive/dp/1506291627"
           },
           {
             title: "Princeton Review AP Physics C Prep",
             description: "Strategic approach with calculus-based problems",
-            url: "https://www.amazon.com/Princeton-Review-Physics-Premium-Prep/dp/0593516769"
+            url: "https://penguinrandomhousesecondaryeducation.com/book/?isbn=9780593517949"
           },
           {
             title: "5 Steps to a 5: AP Physics C",
@@ -290,12 +290,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Biology Premium",
             description: "Comprehensive review with practice tests and detailed explanations",
-            url: "https://www.amazon.com/Barrons-AP-Biology-Premium-2024/dp/1506287933"
+            url: "https://www.amazon.ca/AP-Biology-Premium-2026-Comprehensive/dp/150629670X"
           },
           {
             title: "Princeton Review AP Biology Prep",
             description: "Strategic approach with proven techniques and practice questions",
-            url: "https://www.amazon.com/Princeton-Review-Biology-Premium-Prep/dp/0593516777"
+            url: "https://penguinrandomhousehighereducation.com/book/?isbn=9780593517567"
           },
           {
             title: "5 Steps to a 5: AP Biology",
@@ -357,12 +357,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Statistics Premium",
             description: "Comprehensive review with practice tests and detailed explanations",
-            url: "https://www.amazon.com/Barrons-AP-Statistics-Premium-2024/dp/1506287941"
+            url: "https://www.amazon.ca/AP-Statistics-Premium-2025-Comprehensive/dp/150629197X"
           },
           {
             title: "Princeton Review AP Statistics Prep",
             description: "Strategic approach with proven techniques and practice questions",
-            url: "https://www.amazon.com/Princeton-Review-Statistics-Premium-Prep/dp/0593516785"
+            url: "https://www.penguinrandomhouse.com/books/775394/princeton-review-ap-statistics-premium-prep-21st-edition-by-the-princeton-review/"
           },
           {
             title: "5 Steps to a 5: AP Statistics",
@@ -424,12 +424,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Chemistry Premium",
             description: "Comprehensive review with practice tests and detailed explanations",
-            url: "https://www.amazon.com/Barrons-AP-Chemistry-Premium-2024/dp/150628795X"
+            url: "https://www.amazon.ca/AP-Chemistry-Premium-2025-Comprehensive/dp/1506291791"
           },
           {
             title: "Princeton Review AP Chemistry Prep",
             description: "Strategic approach with proven techniques and practice questions",
-            url: "https://www.amazon.com/Princeton-Review-Chemistry-Premium-Prep/dp/0593516793"
+            url: "https://www.penguinrandomhouse.com/books/742472/princeton-review-ap-chemistry-premium-prep-26th-edition-by-the-princeton-review/"
           },
           {
             title: "5 Steps to a 5: AP Chemistry",
@@ -491,12 +491,12 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
           {
             title: "Barron's AP Computer Science Principles Premium",
             description: "Comprehensive review with practice tests and detailed explanations",
-            url: "https://www.amazon.com/Barrons-AP-Computer-Science-Principles-Premium/dp/1506287968"
+            url: "https://www.amazon.ca/Barrons-Computer-Science-Online-Tests/dp/1438009194"
           },
           {
             title: "Princeton Review AP Computer Science Principles Prep",
             description: "Strategic approach with proven techniques and practice questions",
-            url: "https://www.amazon.com/Princeton-Review-Computer-Science-Principles-Prep/dp/0593516807"
+            url: "https://www.penguinrandomhouse.com/books/719675/princeton-review-ap-computer-science-principles-prep-3rd-edition-by-the-princeton-review/"
           },
           {
             title: "5 Steps to a 5: AP Computer Science Principles",
