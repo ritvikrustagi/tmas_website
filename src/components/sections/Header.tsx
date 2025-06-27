@@ -83,12 +83,13 @@ export default function Header() {
           <div className="hidden lg:flex xl:hidden items-center gap-2">
             <SearchModal iconOnly />
             <DarkModeToggle />
-          </div>          
+          </div>       
           
-          {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-2">
-            <SearchModal iconOnly/>
-            <DarkModeToggle />
+        {/* Mobile Menu Button */}
+        <div className="flex items-center gap-2 ml-auto lg:hidden">
+          <SearchModal iconOnly />
+          <DarkModeToggle />
+          <div className="md:hidden">
             <Button
               variant="ghost"
               size="sm"
@@ -99,6 +100,7 @@ export default function Header() {
               {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
+        </div>
         </div>        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
