@@ -42,8 +42,8 @@ export default function Header() {
           : 'w-[90%] max-w-6xl'
       }`}
     >
-      <div 
-        className={`glass-effect rounded-2xl border border-gray-200/50 shadow-lg transition-all duration-300 ${
+      <div  
+        className={`glass-effect w-full overflow-hidden rounded-2xl border border-gray-200/50 shadow-lg transition-all duration-300 ${
           isScrolled ? 'py-3 px-6' : 'py-4 px-8'
         }`}
       >
@@ -52,10 +52,9 @@ export default function Header() {
             <Image 
               src="/header_banner.png" 
               alt="TMAS Academy"
-              width={isScrolled ? 80 : 100}
-              height={isScrolled ? 20 : 25}
+              width={100}
+              height={25}
               className="transition-all duration-300"
-              priority
             />
           </div>          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-2">
@@ -76,12 +75,19 @@ export default function Header() {
           </nav>
 
           {/* Search and Controls */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden xl:flex items-center gap-2">
             <SearchModal />
+          <DarkModeToggle />
+          </div>
+
+          <div className="hidden lg:flex xl:hidden items-center gap-2">
+            <SearchModal iconOnly />
             <DarkModeToggle />
-          </div>          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            <SearchModal />
+          </div>          
+          
+          {/* Mobile Menu Button */}
+          <div className="flex lg:hidden items-center gap-2">
+            <SearchModal iconOnly/>
             <DarkModeToggle />
             <Button
               variant="ghost"

@@ -316,7 +316,7 @@ export default function Books({ showAll = true }: BooksProps) {
             <Link href="/books">
               <Button 
                 size="lg" 
-                className="bg-primary-gradient text-white hover:shadow-xl px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
+                className="bg-primary-gradient text-white xl px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
               >
                 View More Books
                 <ArrowRight className="w-5 h-5 ml-2" />

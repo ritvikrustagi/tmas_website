@@ -42,7 +42,17 @@ const searchData: SearchResult[] = [
   { id: 'testimonials', title: 'Success Stories', description: 'Read testimonials from successful students', type: 'section', href: '/testimonials', icon: <Users className="w-4 h-4" /> },
 ]
 
-export default function SearchModal() {
+export default function SearchModal({ iconOnly = false }: { iconOnly?: boolean }) {
+  const openModal = () => { /* your open logic */ }
+
+  if (iconOnly) {
+    return (
+      <button onClick={openModal} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10">
+        <Search className="h-5 w-5" />
+      </button>
+    )
+  }
+  
   const [isOpen, setIsOpen] = useState(false)
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
