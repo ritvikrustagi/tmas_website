@@ -258,7 +258,7 @@ export default function Books({ showAll = true }: BooksProps) {
                 </div>
               </CardHeader>
 
-              <CardContent>
+              <CardContent className="flex-1">
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   {book.description}
                 </p>
@@ -272,32 +272,40 @@ export default function Books({ showAll = true }: BooksProps) {
                   <span>{book.problems} problems</span>
                   <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
                 </div>
-              </CardContent>              <CardFooter className="flex gap-2">
-                <Button 
-                  variant="outline" 
-                  className="flex-1 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
+              </CardContent>              
+             <CardFooter className="grid w-full grid-cols-[1fr_auto] gap-2 px-4 py-3">
+              <div className="grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 gap-2">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full min-w-0 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
                   onClick={() => handlePreviewBook(book)}
                 >
                   <Eye className="w-4 h-4 mr-2" />
                   Preview
                 </Button>
-                <Button 
-                  variant="outline" 
-                  className="flex-1 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="w-full min-w-0 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
                   onClick={() => handleViewBook(book.pdfPath)}
                 >
-                  <ExternalLink className="w-4 h-4 mr-2" />
+                  <ExternalLink className="w-4 h-4" />
                   View PDF
                 </Button>
-                <Button 
-                  variant="ghost" 
-                  size="sm"
-                  className="hover:bg-gray-100 dark:hover:bg-gray-800"
-                  onClick={() => handleDownloadBook(book.pdfPath, book.title)}
-                >
-                  <Download className="w-4 h-4" />
-                </Button>
-              </CardFooter>
+              </div>
+
+              <Button
+                size="sm"
+                variant="ghost"
+                className="justify-self-end hover:bg-gray-50 dark:hover:bg-gray-800"
+                onClick={() => handleDownloadBook(book.pdfPath, book.title)}
+              >
+                <Download className="w-4 h-4" />
+              </Button>
+            </CardFooter>
+
             </Card>
           ))}
         </StaggeredGrid>
