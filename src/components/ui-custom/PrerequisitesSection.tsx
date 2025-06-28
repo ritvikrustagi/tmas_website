@@ -90,6 +90,44 @@ export default function PrerequisitesSection({ bookId }: PrerequisitesSectionPro
         "Focus on understanding the mathematical-physical connections"
       ]
     },
+    5: { // AMC 10/12
+      title: "Prerequisites for AMC 10/12",
+      summary: "This comprehensive competition math guide covers advanced problem-solving strategies and techniques specifically designed for the AMC 10 and AMC 12 competitions. The book assumes you have a strong foundation in algebra, geometry, and trigonometry, and will develop your mathematical reasoning and creative problem-solving skills.",
+      howToUse: "Use this book to prepare for AMC competitions. Work through problems systematically, practice time management, and focus on understanding multiple solution approaches. Complete timed practice tests to simulate real competition conditions and build your confidence.",
+      prerequisites: [
+        "Strong algebra skills (factoring, solving equations, function analysis)",
+        "Complete understanding of geometry (angles, areas, volumes, transformations)",
+        "Proficiency in trigonometry (sine, cosine, tangent, unit circle)",
+        "Experience with number theory and counting principles",
+        "Comfort with mathematical proofs and logical reasoning"
+      ],
+      studyTips: [
+        "Practice problems under timed conditions regularly",
+        "Learn multiple solution approaches for each problem type",
+        "Focus on understanding the underlying mathematical concepts",
+        "Review past AMC problems and solutions",
+        "Develop efficient problem-solving strategies and shortcuts"
+      ]
+    },
+    6: { // AMC 10/12 Key Strategies and Formulas
+      title: "Prerequisites for AMC 10/12 Key Strategies and Formulas",
+      summary: "This quick reference guide provides essential formulas, strategies, and tips for AMC competitions. The book serves as a comprehensive cheat sheet and study aid, assuming you have basic mathematical knowledge and want to optimize your competition performance.",
+      howToUse: "Use this book as a quick reference during practice sessions and as a final review before competitions. Memorize key formulas and strategies, practice applying them to different problem types, and use the tips to improve your problem-solving efficiency.",
+      prerequisites: [
+        "Basic understanding of algebra, geometry, and trigonometry",
+        "Familiarity with mathematical notation and symbols",
+        "Experience with mathematical problem-solving",
+        "Interest in competition mathematics",
+        "Ability to memorize and apply formulas quickly"
+      ],
+      studyTips: [
+        "Memorize essential formulas and their applications",
+        "Practice applying strategies to various problem types",
+        "Use this guide as a quick reference during practice",
+        "Review formulas regularly to maintain retention",
+        "Combine with full practice problems for best results"
+      ]
+    },
     7: { // AP Biology
       title: "Prerequisites for AP Biology",
       summary: "This comprehensive biology guide covers the fundamental principles of life science, from cellular processes to ecological systems. The book assumes you have a basic understanding of scientific inquiry and will develop your knowledge through detailed explanations, diagrams, and practice questions.",
