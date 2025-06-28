@@ -166,14 +166,12 @@ export default function Books({ showAll = true }: BooksProps) {
   const [previewBook, setPreviewBook] = useState<typeof books[0] | null>(null)
   const router = useRouter()
 
-  // Limit books based on screen size if showAll is false
+  // Display all books for infinite slider on homepage, or limit for books page
   const getDisplayBooks = () => {
-    if (showAll) return books
+    if (showAll) return books // Books page - show all in grid
     
-    // For homepage: show 3 books on small/large screens, 4 books on medium screens
-    // Small: 3 books (1x3), Medium: 4 books (2x2), Large: 3 books (3x1)
-    // We take 4 books and use CSS to hide the 4th book on small/large screens
-    return books.slice(0, 4)
+    // Homepage - show all books in infinite slider
+    return books
   }
   
   const displayBooks = getDisplayBooks()
@@ -216,99 +214,286 @@ export default function Books({ showAll = true }: BooksProps) {
           </p>
         </AnimatedSection>
 
-        {/* Books Grid with Staggered Animation */}
-        <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayBooks.map((book, index) => (
-            <Card 
-              key={book.id} 
-              className={`glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200 ${
-                !showAll && index === 3 ? 'hidden md:block lg:hidden' : ''
-              }`}
-            >
-              <CardHeader>
-                {/* Book Cover Image */}
-                <div className="w-full h-48 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden">
-                  <div 
-                    className="w-full h-full flex flex-col items-center justify-between p-4 text-white font-bold shadow-lg rounded-lg"
-                    style={{
-                      background: book.coverGradient,
-                    }}
-                  >
-                    <div className="text-xs font-semibold opacity-80 tracking-wider">TMAS ACADEMY</div>
-                    <div className="text-center flex-1 flex items-center">
-                      <div className="text-lg font-bold leading-tight text-shadow-lg">
-                        {book.title.replace('ACE ', '').split(' ').slice(0, 3).join(' ')}
+        {/* Conditional rendering: Infinite slider for homepage, grid for books page */}
+        {!showAll ? (
+          /* Infinite Slider for Homepage */
+          <div className="relative overflow-hidden">
+            <div className="flex animate-infinite-scroll">
+              {/* First set of books */}
+              {displayBooks.map((book) => (
+                <div key={`first-${book.id}`} className="flex-shrink-0 w-80 mx-4">
+                  <Card className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200 h-full">
+                    <CardHeader>
+                      {/* Book Cover Image */}
+                      <div className="w-full h-48 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden">
+                        <div 
+                          className="w-full h-full flex flex-col items-center justify-between p-4 text-white font-bold shadow-lg rounded-lg"
+                          style={{
+                            background: book.coverGradient,
+                          }}
+                        >
+                          <div className="text-xs font-semibold opacity-80 tracking-wider">TMAS ACADEMY</div>
+                          <div className="text-center flex-1 flex items-center">
+                            <div className="text-lg font-bold leading-tight text-shadow-lg">
+                              {book.title.replace('ACE ', '').split(' ').slice(0, 3).join(' ')}
+                            </div>
+                          </div>
+                          <div className="text-xs opacity-90">{book.author.split(' ').slice(0, 2).join(' ')}</div>
+                        </div>
                       </div>
-                    </div>
-                    <div className="text-xs opacity-90">{book.author.split(' ').slice(0, 2).join(' ')}</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <CardTitle className="text-xl font-semibold text-black mb-2 group-hover:text-gray-800 transition-colors">
-                      {book.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600 font-medium">
-                      Author: {book.author}
-                    </CardDescription>
-                  </div>                  <Badge variant="secondary" className={`ml-2 text-xs ${book.badgeColor} border-0`}>
-                    {book.badge}
-                  </Badge>
-                </div>
-              </CardHeader>
+                      
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <CardTitle className="text-xl font-semibold text-black mb-2 group-hover:text-gray-800 transition-colors">
+                            {book.title}
+                          </CardTitle>
+                          <CardDescription className="text-gray-600 font-medium">
+                            Author: {book.author}
+                          </CardDescription>
+                        </div>
+                        <Badge variant="secondary" className={`ml-2 text-xs ${book.badgeColor} border-0`}>
+                          {book.badge}
+                        </Badge>
+                      </div>
+                    </CardHeader>
 
-              <CardContent className="flex-1">
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  {book.description}
-                </p>
-                
-                {/* Book Stats */}
-                <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
-                  <span className="flex items-center gap-1">
-                    <BookOpen className="w-4 h-4" />
-                    {book.pages} pages
-                  </span>
-                  <span>{book.problems} problems</span>
-                  <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
+                    <CardContent className="flex-1">
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        {book.description}
+                      </p>
+                      
+                      {/* Book Stats */}
+                      <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                        <span className="flex items-center gap-1">
+                          <BookOpen className="w-4 h-4" />
+                          {book.pages} pages
+                        </span>
+                        <span>{book.problems} problems</span>
+                        <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
+                      </div>
+                    </CardContent>
+
+                    <CardFooter className="grid w-full grid-cols-[1fr_auto] gap-2 px-4 py-3">
+                      <div className="grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 gap-2">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="w-full min-w-0 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
+                          onClick={() => handlePreviewBook(book)}
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          Preview
+                        </Button>
+
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="w-full min-w-0 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+                          onClick={() => handleViewBook(book.pdfPath)}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          View PDF
+                        </Button>
+                      </div>
+
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        className="justify-self-end hover:bg-gray-50 dark:hover:bg-gray-800"
+                        onClick={() => handleDownloadBook(book.pdfPath, book.title)}
+                      >
+                        <Download className="w-4 h-4" />
+                      </Button>
+                    </CardFooter>
+                  </Card>
                 </div>
-              </CardContent>              
-             <CardFooter className="grid w-full grid-cols-[1fr_auto] gap-2 px-4 py-3">
-              <div className="grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 gap-2">
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="w-full min-w-0 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
-                  onClick={() => handlePreviewBook(book)}
-                >
-                  <Eye className="w-4 h-4 mr-2" />
-                  Preview
-                </Button>
+              ))}
+              
+              {/* Duplicate set for seamless infinite scroll */}
+              {displayBooks.map((book) => (
+                <div key={`second-${book.id}`} className="flex-shrink-0 w-80 mx-4">
+                  <Card className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200 h-full">
+                    <CardHeader>
+                      {/* Book Cover Image */}
+                      <div className="w-full h-48 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden">
+                        <div 
+                          className="w-full h-full flex flex-col items-center justify-between p-4 text-white font-bold shadow-lg rounded-lg"
+                          style={{
+                            background: book.coverGradient,
+                          }}
+                        >
+                          <div className="text-xs font-semibold opacity-80 tracking-wider">TMAS ACADEMY</div>
+                          <div className="text-center flex-1 flex items-center">
+                            <div className="text-lg font-bold leading-tight text-shadow-lg">
+                              {book.title.replace('ACE ', '').split(' ').slice(0, 3).join(' ')}
+                            </div>
+                          </div>
+                          <div className="text-xs opacity-90">{book.author.split(' ').slice(0, 2).join(' ')}</div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <CardTitle className="text-xl font-semibold text-black mb-2 group-hover:text-gray-800 transition-colors">
+                            {book.title}
+                          </CardTitle>
+                          <CardDescription className="text-gray-600 font-medium">
+                            Author: {book.author}
+                          </CardDescription>
+                        </div>
+                        <Badge variant="secondary" className={`ml-2 text-xs ${book.badgeColor} border-0`}>
+                          {book.badge}
+                        </Badge>
+                      </div>
+                    </CardHeader>
 
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="w-full min-w-0 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
-                  onClick={() => handleViewBook(book.pdfPath)}
-                >
-                  <ExternalLink className="w-4 h-4" />
-                  View PDF
-                </Button>
-              </div>
+                    <CardContent className="flex-1">
+                      <p className="text-gray-700 mb-4 leading-relaxed">
+                        {book.description}
+                      </p>
+                      
+                      {/* Book Stats */}
+                      <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                        <span className="flex items-center gap-1">
+                          <BookOpen className="w-4 h-4" />
+                          {book.pages} pages
+                        </span>
+                        <span>{book.problems} problems</span>
+                        <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
+                      </div>
+                    </CardContent>
 
-              <Button
-                size="sm"
-                variant="ghost"
-                className="justify-self-end hover:bg-gray-50 dark:hover:bg-gray-800"
-                onClick={() => handleDownloadBook(book.pdfPath, book.title)}
+                    <CardFooter className="grid w-full grid-cols-[1fr_auto] gap-2 px-4 py-3">
+                      <div className="grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 gap-2">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="w-full min-w-0 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
+                          onClick={() => handlePreviewBook(book)}
+                        >
+                          <Eye className="w-4 h-4 mr-2" />
+                          Preview
+                        </Button>
+
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="w-full min-w-0 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+                          onClick={() => handleViewBook(book.pdfPath)}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          View PDF
+                        </Button>
+                      </div>
+
+                      <Button
+                        size="sm"
+                        variant="ghost"
+                        className="justify-self-end hover:bg-gray-50 dark:hover:bg-gray-800"
+                        onClick={() => handleDownloadBook(book.pdfPath, book.title)}
+                      >
+                        <Download className="w-4 h-4" />
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          /* Grid for Books Page */
+          <StaggeredGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {displayBooks.map((book) => (
+              <Card 
+                key={book.id} 
+                className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200"
               >
-                <Download className="w-4 h-4" />
-              </Button>
-            </CardFooter>
+                <CardHeader>
+                  {/* Book Cover Image */}
+                  <div className="w-full h-48 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden">
+                    <div 
+                      className="w-full h-full flex flex-col items-center justify-between p-4 text-white font-bold shadow-lg rounded-lg"
+                      style={{
+                        background: book.coverGradient,
+                      }}
+                    >
+                      <div className="text-xs font-semibold opacity-80 tracking-wider">TMAS ACADEMY</div>
+                      <div className="text-center flex-1 flex items-center">
+                        <div className="text-lg font-bold leading-tight text-shadow-lg">
+                          {book.title.replace('ACE ', '').split(' ').slice(0, 3).join(' ')}
+                        </div>
+                      </div>
+                      <div className="text-xs opacity-90">{book.author.split(' ').slice(0, 2).join(' ')}</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl font-semibold text-black mb-2 group-hover:text-gray-800 transition-colors">
+                        {book.title}
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 font-medium">
+                        Author: {book.author}
+                      </CardDescription>
+                    </div>
+                    <Badge variant="secondary" className={`ml-2 text-xs ${book.badgeColor} border-0`}>
+                      {book.badge}
+                    </Badge>
+                  </div>
+                </CardHeader>
 
-            </Card>
-          ))}
-        </StaggeredGrid>
+                <CardContent className="flex-1">
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    {book.description}
+                  </p>
+                  
+                  {/* Book Stats */}
+                  <div className="grid grid-cols-2 gap-2 text-sm text-gray-600 mb-4">
+                    <span className="flex items-center gap-1">
+                      <BookOpen className="w-4 h-4" />
+                      {book.pages} pages
+                    </span>
+                    <span>{book.problems} problems</span>
+                    <span className="text-xs text-gray-500 col-span-2">Size: {book.size}</span>
+                  </div>
+                </CardContent>
+
+                <CardFooter className="grid w-full grid-cols-[1fr_auto] gap-2 px-4 py-3">
+                  <div className="grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 gap-2">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="w-full min-w-0 border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-950/20"
+                      onClick={() => handlePreviewBook(book)}
+                    >
+                      <Eye className="w-4 h-4 mr-2" />
+                      Preview
+                    </Button>
+
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="w-full min-w-0 border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800"
+                      onClick={() => handleViewBook(book.pdfPath)}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View PDF
+                    </Button>
+                  </div>
+
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="justify-self-end hover:bg-gray-50 dark:hover:bg-gray-800"
+                    onClick={() => handleDownloadBook(book.pdfPath, book.title)}
+                  >
+                    <Download className="w-4 h-4" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </StaggeredGrid>
+        )}
 
         {/* View More Books Button - only show on homepage */}
         {!showAll && (
