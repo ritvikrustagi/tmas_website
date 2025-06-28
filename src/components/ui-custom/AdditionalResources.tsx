@@ -282,6 +282,140 @@ export default function AdditionalResources({ bookId }: AdditionalResourcesProps
         ]
       }
     },
+    5: { // AMC 10/12
+      title: "Additional Resources for AMC 10/12",
+      description: "Enhance your AMC competition preparation with these carefully curated resources.",
+      resources: {
+        books: [
+          {
+            title: "Art of Problem Solving Volume 1",
+            description: "Comprehensive introduction to algebra and geometry for competitions",
+            url: "https://artofproblemsolving.com/store/item/aops-vol1"
+          },
+          {
+            title: "Art of Problem Solving Volume 2",
+            description: "Advanced topics in algebra, geometry, and number theory",
+            url: "https://artofproblemsolving.com/store/item/aops-vol2"
+          },
+          {
+            title: "Competition Math for Middle School",
+            description: "Essential strategies and techniques for math competitions",
+            url: "https://artofproblemsolving.com/store/item/competition-math-middle-school"
+          }
+        ],
+        websites: [
+          {
+            title: "Art of Problem Solving",
+            description: "Comprehensive math competition resources and online courses",
+            url: "https://artofproblemsolving.com/"
+          },
+          {
+            title: "AMC Resources",
+            description: "Official AMC information, past problems, and solutions",
+            url: "https://www.maa.org/math-competitions/amc-8"
+          },
+          {
+            title: "AoPS Wiki",
+            description: "Extensive collection of math competition problems and solutions",
+            url: "https://artofproblemsolving.com/wiki/index.php/Main_Page"
+          },
+          {
+            title: "Brilliant.org",
+            description: "Interactive problem-solving platform with competition-style questions",
+            url: "https://brilliant.org/"
+          }
+        ],
+        youtubeChannels: [
+          {
+            title: "Art of Problem Solving",
+            description: "Official AoPS channel with competition math tutorials",
+            url: "https://www.youtube.com/c/ArtOfProblemSolving"
+          },
+          {
+            title: "3Blue1Brown",
+            description: "Visual explanations of mathematical concepts and problem-solving",
+            url: "https://www.youtube.com/c/3blue1brown"
+          },
+          {
+            title: "Numberphile",
+            description: "Engaging videos about numbers and mathematical concepts",
+            url: "https://www.youtube.com/c/numberphile"
+          },
+          {
+            title: "MindYourDecisions",
+            description: "Mathematical puzzles and problem-solving strategies",
+            url: "https://www.youtube.com/c/MindYourDecisions"
+          }
+        ]
+      }
+    },
+    6: { // AMC 10/12 Key Strategies and Formulas
+      title: "Additional Resources for AMC 10/12 Key Strategies and Formulas",
+      description: "Enhance your AMC competition preparation with these carefully curated resources.",
+      resources: {
+        books: [
+          {
+            title: "Art of Problem Solving Volume 1",
+            description: "Comprehensive introduction to algebra and geometry for competitions",
+            url: "https://artofproblemsolving.com/store/item/aops-vol1"
+          },
+          {
+            title: "Competition Math for Middle School",
+            description: "Essential strategies and techniques for math competitions",
+            url: "https://artofproblemsolving.com/store/item/competition-math-middle-school"
+          },
+          {
+            title: "Mathematical Olympiad Challenges",
+            description: "Advanced problem-solving techniques and strategies",
+            url: "https://www.amazon.com/Mathematical-Olympiad-Challenges-Titu-Andreescu/dp/0817641554"
+          }
+        ],
+        websites: [
+          {
+            title: "Art of Problem Solving",
+            description: "Comprehensive math competition resources and online courses",
+            url: "https://artofproblemsolving.com/"
+          },
+          {
+            title: "AMC Resources",
+            description: "Official AMC information, past problems, and solutions",
+            url: "https://www.maa.org/math-competitions/amc-8"
+          },
+          {
+            title: "AoPS Wiki",
+            description: "Extensive collection of math competition problems and solutions",
+            url: "https://artofproblemsolving.com/wiki/index.php/Main_Page"
+          },
+          {
+            title: "Brilliant.org",
+            description: "Interactive problem-solving platform with competition-style questions",
+            url: "https://brilliant.org/"
+          }
+        ],
+        youtubeChannels: [
+          {
+            title: "Art of Problem Solving",
+            description: "Official AoPS channel with competition math tutorials",
+            url: "https://www.youtube.com/c/ArtOfProblemSolving"
+          },
+          {
+            title: "3Blue1Brown",
+            description: "Visual explanations of mathematical concepts and problem-solving",
+            url: "https://www.youtube.com/c/3blue1brown"
+          },
+          {
+            title: "Numberphile",
+            description: "Engaging videos about numbers and mathematical concepts",
+            url: "https://www.youtube.com/c/numberphile"
+          },
+          {
+            title: "MindYourDecisions",
+            description: "Mathematical puzzles and problem-solving strategies",
+            url: "https://www.youtube.com/c/MindYourDecisions"
+          }
+        ]
+      }
+    },
     7: { // AP Biology
       title: "Additional Resources for AP Biology",
       description: "Enhance your AP Biology preparation with these carefully curated resources.",
