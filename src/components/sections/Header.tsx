@@ -77,7 +77,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2">
+          <nav className="hidden md:flex flex-1 justify-between items-start mx-3">
             {navItems.map((item) => (
               <div key={item.href} className="relative">
                 {item.hasDropdown ? (
@@ -88,15 +88,14 @@ export default function Header() {
                   >
                     <Link
                       href={item.href}
-                      className={`px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full hover:bg-black/5 dark:hover:bg-white/10 flex items-center gap-1 ${
+                      className={`px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full hover:bg-black/5 dark:hover:bg-white/10 flex flex-col items-center text-center w-[80px] sm:w-auto ${
                         pathname === item.href
                           ? 'font-semibold bg-black/8 shadow-sm dark:bg-white/10'
                           : ''
                       }`}
                       style={{ color: theme === 'dark' ? '#ffffff' : '#000000' }}
                     >
-                      {item.label}
-                      <ChevronDown className="w-3 h-3" />
+                      <span className="block text-center">{item.label}</span>
                     </Link>
                     
                     {/* Dropdown Menu */}
@@ -140,7 +139,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className={`px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full hover:bg-black/5 dark:hover:bg-white/10 ${
+                    className={`px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full hover:bg-black/5 dark:hover:bg-white/10 flex flex-col items-center text-center w-[80px] sm:w-auto ${
                       pathname === item.href
                         ? 'font-semibold bg-black/8 shadow-sm dark:bg-white/10'
                         : ''
@@ -192,7 +191,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className={`px-4 py-3 text-sm font-medium text-left transition-all duration-200 rounded-xl hover:bg-black/5 dark:hover:bg-white/10 ${
+                    className={`px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full hover:bg-black/5 dark:hover:bg-white/10 flex flex-col items-center text-center w-[80px] sm:w-auto ${
                       pathname === item.href
                         ? 'font-semibold bg-black/8 dark:bg-white/10'
                         : ''
