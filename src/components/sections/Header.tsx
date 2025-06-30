@@ -124,7 +124,7 @@ export default function Header() {
                             </Link>
                           ))}
                         </div>
-                        <div className="px-4 py-2 border-t border-gray-100 dark:border-gray-700">
+                        <div className="px-4 pt-1 border-t border-gray-100 dark:border-gray-700">
                           <Link
                             href="/books"
                             className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
