@@ -113,28 +113,89 @@ export default function About() {
                   Board Advisors
                 </h2>
                 <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                  {/* Placeholder for board advisors */}
-                  {[1, 2, 3].map((index) => (
-                    <div key={index} className="text-center">
-                      <div 
-                        className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                        style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                      >
-                        <span 
-                          className="text-lg font-bold"
-                          style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                        >
-                          BA{index}
-                        </span>
-                      </div>
-                      <p 
-                        className="text-sm"
-                        style={{ color: isDark ? '#d1d5db' : '#374151' }}
-                      >
-                        Advisor {index}
-                      </p>
+
+                {/* Advisor 1 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/ziang.jpeg"
+                        alt="Ziang Zhuang"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
-                  ))}
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Ziang Zhuang
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! I'm Ziang Zhuang, one of the TMAS Academy Server Moderators/Admins and an author for the AMC 8 Book. I'm a mathematics, physics, and earth science "main" and enjoy swimming and piano!
+                      </p>
+                  </div>
+                  
+                  {/* Advisor 2 */}
+                  <div className="text-center">
+                    <div 
+                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
+                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
+                    >
+                      <span 
+                        className="text-lg font-bold"
+                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
+                      >
+                        ABC
+                      </span>
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Advisor 3
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Placeholder description
+                      </p>
+                  </div>
+
+                  {/* Advisor 3 */}
+                  <div className="text-center">
+                    <div 
+                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
+                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
+                    >
+                      <span 
+                        className="text-lg font-bold"
+                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
+                      >
+                        ABC
+                      </span>
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Advisor 3
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Placeholder description
+                      </p>
+                  </div>
+
                 </div>
               </div>
 
@@ -147,27 +208,90 @@ export default function About() {
                   Published Authors
                 </h2>
                 <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                  {[1, 2, 3].map((index) => (
-                    <div key={index} className="text-center">
-                      <div 
-                        className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                        style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                      >
-                        <span 
-                          className="text-lg font-bold"
-                          style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                        >
-                          PA{index}
-                        </span>
-                      </div>
-                      <p 
-                        className="text-sm"
-                        style={{ color: isDark ? '#d1d5db' : '#374151' }}
-                      >
-                        Author {index}
-                      </p>
+
+                {/* Author 1 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/aditya.jpg"
+                        alt="Aditya Baisakh"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
-                  ))}
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Aditya Baisakh
+
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Aditya hails from Baton Rouge, and is an incoming student at LSU. He wrote the AP Chemistry and Biology books as a senior. In his free time, he enjoys doing martial arts, coding, and playing the piano.
+                      </p>
+                  </div>
+                  
+                  {/* Author 2 */}
+                  <div className="text-center">
+                    <div 
+                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
+                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
+                    >
+                      <span 
+                        className="text-lg font-bold"
+                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
+                      >
+                        ABC
+                      </span>
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Author 3
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Placeholder description
+                      </p>
+                  </div>
+
+                  {/* Author 3 */}
+                  <div className="text-center">
+                    <div 
+                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
+                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
+                    >
+                      <span 
+                        className="text-lg font-bold"
+                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
+                      >
+                        ABC
+                      </span>
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Author 3
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Placeholder description
+                      </p>
+                  </div>
+
                 </div>
               </div>
 
@@ -177,30 +301,218 @@ export default function About() {
                   className="text-3xl font-bold text-center mb-8"
                   style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 >
-                  Academic Writing Interns
+                  Academic Writing
                 </h2>
                 <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                  {[1, 2, 3].map((index) => (
-                    <div key={index} className="text-center">
-                      <div 
-                        className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                        style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                      >
-                        <span 
-                          className="text-lg font-bold"
-                          style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                        >
-                          AW{index}
-                        </span>
-                      </div>
-                      <p 
-                        className="text-sm"
-                        style={{ color: isDark ? '#d1d5db' : '#374151' }}
-                      >
-                        Writer {index}
-                      </p>
+
+                {/* Writing Intern 1 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/shreyas.jpg"
+                        alt="Shreyas Penugonda - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
-                  ))}
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Shreyas Penugonda
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Shreyas Penugonda is passionate about computer science and enjoys coding, problem-solving, and participating in math contests to challenge himself academically. In his free time, he likes playing soccer and watching TV.
+                      </p>
+                  </div>
+                  
+                  {/* Writing Intern 2 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/shivek.JPG"
+                        alt="Shivek Saraf - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Shivek Saraf
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! I'm Shivek, a student at McNeil High School. I joined TMAS Academy a year ago to bring my AI skills to the forefront of education specifically in areas where I noticed me and my peers struggling in, like AP Classes. I love automating menial tasks and solving Rubik's Cubes.
+                      </p>
+                  </div>
+
+                  {/* Writing Intern 3 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/mustafa.png"
+                        alt="Mustafa Hameed - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Mustafa Hameed
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Mustafa Hameed is a high school student passionate about education, innovation, and impact. He’s authored a book on mindset, launched AI projects, and led nonprofit initiatives. With strong experience in writing, design, and leadership, Mustafa is committed to making knowledge accessible and engaging for students around the world.
+                      </p>
+                  </div>
+
+                  {/* Writing Intern 4 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/mohnish.jpeg"
+                        alt="Mohnish Naga Satya Sai Chintalapudi - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Mohnish Naga Satya Sai Chintalapudi
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi, my name is Mohnish Naga Satya Sai Chintalapudi and I am an academic writing intern. Here's the description: Mohnish is a rising sophomore at Alliance Academy for Innovation and is incredibly excited to start making contributions in the field of academia and research.
+                      </p>
+                  </div>
+
+                  {/* Writing Intern 5 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/sanjay.png"
+                        alt="Sanjay Rameshkrishnan - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Sanjay Rameshkrishnan
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Sanjay is one of TMAS Academy's Academic Writing interns. He is currently in the 9th grade at Seminole High School. He is interested in math, physics, and programming, mainly in C++. He aims to create a positive impact on the world by sharing his knowledge and passion of STEM.
+                      </p>
+                  </div>
+
+                  {/* Writing Intern 6 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/anmol.jpg"
+                        alt="Anmol Alva - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Anmol Alva
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        I am Anmol Alva. I am a rising 9th grader at Blue Valley High School in Overland Park, KS. I love mathematics, computer science, debate and speech, and writing. I have written and published 3 books. I believe in giving back to my community by teaching my neighborhood kids.
+                      </p>
+                  </div>
+
+                  {/* Writing Intern 7 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/sricharan.jpg"
+                        alt="Sricharan Pullela - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Sricharan Pullela
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! My name is Sricharan, a Student at Mountain House High School. I joined TMAS as a writing intern to present my writing skills to an academically inclined audience. Some of my hobbies include chess and basketball.
+                      </p>
+                  </div>
+
+                  {/* Writing Intern 8 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/nishanth.jpg"
+                        alt="Nishanth Kotapati - Academic Writing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Nishanth Kotapati
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Nishanth is a rising junior at Forsyth Central High School and an Academic Writing Intern at TMAS Academy. He’s passionate about STEM education, writing, and mentorship. With experience in research, healthcare, and robotics, Nishanth strives to create clear, accessible educational content that inspires and empowers students.
+                      </p>
+                  </div>
+
                 </div>
               </div>
 
@@ -210,30 +522,270 @@ export default function About() {
                   className="text-3xl font-bold text-center mb-8"
                   style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 >
-                  Marketing Interns
+                  Marketing 
                 </h2>
                 <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-                  {[1, 2, 3].map((index) => (
-                    <div key={index} className="text-center">
-                      <div 
-                        className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                        style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                      >
-                        <span 
-                          className="text-lg font-bold"
-                          style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                        >
-                          M{index}
-                        </span>
-                      </div>
-                      <p 
-                        className="text-sm"
-                        style={{ color: isDark ? '#d1d5db' : '#374151' }}
-                      >
-                        Marketer {index}
-                      </p>
+
+                  {/* Marketing Intern 1 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/katelyn.jpg"
+                        alt="Katelyn Thilak - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
-                  ))}
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Katelyn Thilak
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! I’m Katelyn, a rising freshman at Irvington High School in California. I’m the Marketing Leader at TMAS, where I guide a team of interns and lead projects like social media campaigns, school outreach, and content creation for platforms like Instagram, TikTok, and LinkedIn. I enjoy developing creative strategies to expand our impact and connect with students and educators. I’m also passionate about taekwondo, and in my free time, I’m a badminton player, and a pianist. 
+                      </p>
+                  </div>
+
+                {/* Marketing Intern 2 */}
+                <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/mahado.jpg"
+                        alt="Mahado Abdirahman - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Mahado Abdirahman
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Mahado is thrilled to lead marketing efforts for TMAS, leveraging her creative expertise to drive education awareness and engagement, and propel TMAS forward.
+                      </p>
+                  </div>
+                  
+                  {/* Marketing Intern 3 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/pranav.png"
+                        alt="Pranav Saravanan - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Pranav Saravanan
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Pranav is an aspiring innovator who is passionate about math, finance, and technology. At TMAS Academy, he creates educational content that simplifies complex topics and helps students build confidence in their learning. With experience in research, competitions, and coding, Pranav makes academic subjects more accessible and engaging. 
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 4 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/sujay.jpg"
+                        alt="Sujay Oggu - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Sujay Oggu
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi, my name is Sujay, and I’m an upcoming junior at Mountain House High School. I joined as an intern to TMAS Academy to help people strive in their AP exams, and classes.
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 5 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/sasmit.png"
+                        alt="Sasmit - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Sasmit Chatterjee
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        I'm a HS student with a passion for mechanical /aerospace engineering. My hobbies are chess, kickboxing, piano and tennis.
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 6 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/rayyan.jpeg"
+                        alt="Rayyan Siddiqui - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Rayyan Siddiqui
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        I am a student passionate about Computer Science, Programming, and Business.
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 7 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/eliana.jpg"
+                        alt="Eliana Zerie - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Eliana Zerie
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi, I’m Eliana, a rising junior from Minnesota. I’m currently a violinist and like playing tennis. I always enjoy the opportunity to work with others and I’m excited to be a Marketing Intern for TMAS Academy!
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 8 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/dainna.jpeg"
+                        alt=""
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Dainna Park
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! My name is Dainna, and I’m a marketing intern in Group A. I’m passionate about business, computer science, and building meaningful connections through strategic marketing. Outside of school, I enjoy swimming, hiking, and traveling.
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 8 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/bonnie.webp"
+                        alt="Bonnie Kim - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Bonnie Kim
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! My name is Bonnie Kim and I’m really passionate about math. As someone from a rural background, I hope to help increase the availability of STEM resources for everyone through this opportunity with TMAS, especially those in similar situations.
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 9 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/aashna.png"
+                        alt="Aashna Mishra - Marketing Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Aashna Mishra
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! My name is Aashna and I’m a senior from Texas. I'm a 3rd degree black belt instructor and I also love trying out new restaurants or coffee shops. I’m super excited to be part of TMAS Academy as a Marketing Intern!
+                      </p>
+                  </div>
+
                 </div>
               </div>
 
@@ -243,7 +795,7 @@ export default function About() {
                   className="text-3xl font-bold text-center mb-8"
                   style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 >
-                  Software Engineering Interns
+                  Software Engineers
                 </h2>
                 <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
                   {/* Dhairya - First Software Engineer */}
@@ -263,47 +815,64 @@ export default function About() {
                     >
                       Dhairya
                     </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        placeholder
+                      </p>
                   </div>
                   
                   {/* Remaining placeholders */}
                   <div className="text-center">
-                    <div 
-                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                    >
-                      <span 
-                        className="text-lg font-bold"
-                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                      >
-                        E
-                      </span>
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/eric.png"
+                        alt="Eric Chen - Software Engineering Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                     <p 
                       className="text-sm"
                       style={{ color: isDark ? '#d1d5db' : '#374151' }}
                     >
-                      Eric
+                      Eric Chen
                     </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hey 👋 I'm Eric, an IBDP and AP student from Toronto. In my free time, I enjoy solving physics problems, programming, taking walks, and trying out new foods. 
+                      </p>
                   </div>
                   
                   <div className="text-center">
-                    <div 
-                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                    >
-                      <span 
-                        className="text-lg font-bold"
-                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                      >
-                        S
-                      </span>
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/sarvesh.png"
+                        alt="Sarvesh - Software Engineering Intern"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                     <p 
                       className="text-sm"
                       style={{ color: isDark ? '#d1d5db' : '#374151' }}
                     >
-                      Sarvesh
+                      Sarvesh Sekar
                     </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        I’m an incoming systems design engineering student at the University of Waterloo and love to create interdisciplinary software projects! I’m also a passionate environmentalist, researcher and tech fanatic across scientific fields.
+                      </p>
                   </div>
                 </div>
               </div>
