@@ -120,7 +120,7 @@ export default function Hero() {
           >            <Button 
               onClick={handleScrollToBooks}
               size="lg"
-              className="bg-primary-gradient text-white hover:shadow-xl px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
+              className="bg-primary-gradient text-white px-8 py-3 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
             >
               Explore Free Books
             </Button>

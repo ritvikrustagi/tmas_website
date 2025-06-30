@@ -154,7 +154,7 @@ export default function Opportunities() {
               <Button 
                 onClick={() => handleApply('General')}
                 size="lg" 
-                className="bg-primary-gradient text-white hover:shadow-xl px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
+                className="bg-primary-gradient text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 border-0"
               >
                 Apply Now / Learn More
               </Button>

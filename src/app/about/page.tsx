@@ -102,15 +102,18 @@ export default function About() {
               </div>
             </div>
 
+            <p className='text-center mb-16'>We’re assembling a Chief Team to build and lead the executive core of this academy — a place where students shape the future for thousands of others. We’re looking for highly motivated students who can dedicate several hours daily and are ready to make this a priority in their lives.
+</p>
+
             {/* Team Sections */}
             <div className="space-y-16">
-              {/* Board Advisors */}
+              {/* Chief Team */}
               <div>
                 <h2 
                   className="text-3xl font-bold text-center mb-8"
                   style={{ color: isDark ? '#ffffff' : '#1f2937' }}
                 >
-                  Board Advisors
+                  Chief Team
                 </h2>
                 <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
 
@@ -238,29 +241,27 @@ export default function About() {
                   
                   {/* Author 2 */}
                   <div className="text-center">
-                    <div 
-                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                    >
-                      <span 
-                        className="text-lg font-bold"
-                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                      >
-                        ABC
-                      </span>
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/aviva.png"
+                        alt="Aviva Iyerkhan"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                     <p 
                       className="text-sm font-medium"
                       style={{ color: isDark ? '#d1d5db' : '#374151' }}
                     >
-                      Author 3
+                      Aviva Iyerkhan
                     </p>
                     <p 
                         className="text-xs max-w-xs mx-auto"
                         style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
                       >
                         {/* Placeholder description, max 50 words */}
-                        Placeholder description
+                        Hello! My name is Aviva Iyerkhan and I am a senior at Lynbrook High School in San Jose, California. Throughout middle and high school, I have sought to provide the youth around me with STEM education opportunities, such as through tutoring or creating curriculum. By being an author for TMAS academy, I hope to help other students trying to succeed in STEM.
                       </p>
                   </div>
 
@@ -548,7 +549,7 @@ export default function About() {
                         style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
                       >
                         {/* Placeholder description, max 50 words */}
-                        Hi! I’m Katelyn, a rising freshman at Irvington High School in California. I’m the Marketing Leader at TMAS, where I guide a team of interns and lead projects like social media campaigns, school outreach, and content creation for platforms like Instagram, TikTok, and LinkedIn. I enjoy developing creative strategies to expand our impact and connect with students and educators. I’m also passionate about taekwondo, and in my free time, I’m a badminton player, and a pianist. 
+                        Hi! I’m Katelyn, a student at Irvington High School. As a Marketing Leader at TMAS, I guide a team of interns and lead projects like social media campaigns, school outreach, and content creation for Instagram, TikTok, and LinkedIn. I’m also passionate about taekwondo, and I enjoy playing badminton, piano, and exploring creativity. 
                       </p>
                   </div>
 
