@@ -34,7 +34,7 @@ export default function Breadcrumbs() {
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed top-24 left-1/2 transform -translate-x-1/2 z-40"
+      className="fixed top-28 left-1/2 transform -translate-x-1/2 z-40"
     >
       <div className="glass-effect px-4 py-2 rounded-full border border-gray-200/50 shadow-lg">
         <nav className="flex items-center space-x-2 text-sm">
