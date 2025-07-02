@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 
 import React from 'react'
@@ -142,63 +143,6 @@ export default function About() {
                         Hi! I'm Ziang Zhuang, one of the TMAS Academy Server Moderators/Admins and an author for the AMC 8 Book. I'm a mathematics, physics, and earth science "main" and enjoy swimming and piano!
                       </p>
                   </div>
-                  
-                  {/* Advisor 2 */}
-                  <div className="text-center">
-                    <div 
-                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                    >
-                      <span 
-                        className="text-lg font-bold"
-                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                      >
-                        ABC
-                      </span>
-                    </div>
-                    <p 
-                      className="text-sm font-medium"
-                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
-                    >
-                      Advisor 3
-                    </p>
-                    <p 
-                        className="text-xs max-w-xs mx-auto"
-                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
-                      >
-                        {/* Placeholder description, max 50 words */}
-                        Placeholder description
-                      </p>
-                  </div>
-
-                  {/* Advisor 3 */}
-                  <div className="text-center">
-                    <div 
-                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                    >
-                      <span 
-                        className="text-lg font-bold"
-                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                      >
-                        ABC
-                      </span>
-                    </div>
-                    <p 
-                      className="text-sm font-medium"
-                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
-                    >
-                      Advisor 3
-                    </p>
-                    <p 
-                        className="text-xs max-w-xs mx-auto"
-                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
-                      >
-                        {/* Placeholder description, max 50 words */}
-                        Placeholder description
-                      </p>
-                  </div>
-
                 </div>
               </div>
 
@@ -897,7 +841,7 @@ export default function About() {
                         style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
                       >
                         {/* Placeholder description, max 50 words */}
-                        High school student passionate about building innovative digital experiences that are fast, intuitive, and accessible. Part of various clubs like deca, stem, coding club. Also enjoys playing the guitar.
+                        IB student passionate about building innovative digital experiences that are fast, intuitive, and accessible. Part of various clubs like deca, stem, coding club. Also enjoys playing the guitar.
                       </p>
                   </div>
                   
