@@ -267,29 +267,27 @@ export default function About() {
 
                   {/* Author 3 */}
                   <div className="text-center">
-                    <div 
-                      className="w-24 h-24 rounded-full mx-auto mb-3 flex items-center justify-center"
-                      style={{ backgroundColor: isDark ? '#4b5563' : '#e5e7eb' }}
-                    >
-                      <span 
-                        className="text-lg font-bold"
-                        style={{ color: isDark ? '#d1d5db' : '#6b7280' }}
-                      >
-                        ABC
-                      </span>
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/ipsaan.png"
+                        alt="Ipsaan Sedhai"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
                     <p 
                       className="text-sm font-medium"
                       style={{ color: isDark ? '#d1d5db' : '#374151' }}
                     >
-                      Author 3
+                       Ipsaan Sedhai
                     </p>
                     <p 
                         className="text-xs max-w-xs mx-auto"
                         style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
                       >
                         {/* Placeholder description, max 50 words */}
-                        Placeholder description
+                        Hi everyone, I'm currently a student in Sewanhaka High School, and I'm interested in Physics, Computer Science, and Math. I wrote the ACE AP CSP book in hopes that resources to prepare for the exam would become more accessible for everyone.
                       </p>
                   </div>
 
@@ -735,7 +733,7 @@ export default function About() {
                       </p>
                   </div>
 
-                  {/* Marketing Intern 8 */}
+                  {/* Marketing Intern 9 */}
                   <div className="text-center">
                     <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
                       <Image
@@ -761,7 +759,7 @@ export default function About() {
                       </p>
                   </div>
 
-                  {/* Marketing Intern 9 */}
+                  {/* Marketing Intern 10 */}
                   <div className="text-center">
                     <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
                       <Image
@@ -784,6 +782,84 @@ export default function About() {
                       >
                         {/* Placeholder description, max 50 words */}
                         Hi! My name is Aashna and I’m a senior from Texas. I'm a 3rd degree black belt instructor and I also love trying out new restaurants or coffee shops. I’m super excited to be part of TMAS Academy as a Marketing Intern!
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 11 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/vidushi.png"
+                        alt="Vidushi Nalakonda"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Vidushi Nalakonda
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Vidushi Nalakonda is a marketing intern for TMAS Academy and is a rising senior from Texas. She wants to pursue CS or SDS in the future, and some of her hobbies include reading, baking, and trying new foods.
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 12 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/akshatha.png"
+                        alt="Akshatha Jagan"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Akshatha Jagan
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Vidushi Nalakonda is a marketing intern for TMAS Academy and is a rising senior from Texas. She wants to pursue CS or SDS in the future, and some of her hobbies include reading, baking, and trying new foods.
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 13 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/ganga.png"
+                        alt="Ganga Nair"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Ganga Nair 
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Vidushi Nalakonda is a marketing intern for TMAS Academy and is a rising senior from Texas. She wants to pursue CS or SDS in the future, and some of her hobbies include reading, baking, and trying new foods.
                       </p>
                   </div>
 
@@ -821,7 +897,7 @@ export default function About() {
                         style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
                       >
                         {/* Placeholder description, max 50 words */}
-                        placeholder
+                        High school student passionate about building innovative digital experiences that are fast, intuitive, and accessible. Part of various clubs like deca, stem, coding club. Also enjoys playing the guitar.
                       </p>
                   </div>
                   
