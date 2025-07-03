@@ -135,7 +135,7 @@ export default function About() {
                 {/* Author 1 */}
                   <TeamMemberCard
                     name="Aditya Baisakh"
-                    description="Aditya hails from Baton Rouge, and is an incoming student at LSU. He wrote the AP Chemistry and Biology books as a senior. In his free time, he enjoys doing martial arts, coding, and playing the piano."
+                    description="Aditya hails from Baton Rouge, and is an incoming student at LSU. He wrote the AP Chemistry book and co-wrote the AP Biology book in his senior year. In his free time, he enjoys doing martial arts, coding, and playing the piano."
                     imageUrl="/team_photos/aditya.jpg"
                   />
                   
@@ -151,6 +151,13 @@ export default function About() {
                     name="Ipsaan Sedhai"
                     description="Hi everyone, I'm currently a student in Sewanhaka High School, and I'm interested in Physics, Computer Science, and Math. I wrote the ACE AP CSP book in hopes that resources to prepare for the exam would become more accessible for everyone."
                     imageUrl="/team_photos/ipsaan.png"
+                  />
+
+                  {/* Author 4 */}
+                  <TeamMemberCard
+                    name="Abby Trinh"
+                    description="(Authored AP Bio Book) I’m a rising 10th grader with a strong interest in math, biology, and chemistry. I love challenging myself through math competitions, and I spend a lot of time practicing problem-solving and exploring advanced topics. Outside of academics, I like to stay involved in my community and spend time with family and friends. I’m always looking for new opportunities to learn, grow, and contribute. "
+                    imageUrl="/team_photos/abby.png"
                   />
 
                 </div>
@@ -333,11 +340,25 @@ export default function About() {
                     imageUrl="/team_photos/ganga.png"
                   />
 
-                  {/* Marketing Intern 13 */}
+                  {/* Marketing Intern 14 */}
                   <TeamMemberCard
                     name="Abiramy Radhakrishnan"
                     description="Abiramy Radhakrishnan is a high school student at Hebron with a passion for healthcare and plans to pursue a career in the field. She enjoys being part of student-led organizations, which is why she joined TMAS and took on a marketing internship to build her communication and outreach skills."
                     imageUrl="/team_photos/abiramy.jpg"
+                  />
+
+                  {/* Marketing Intern 15 */}
+                  <TeamMemberCard
+                    name="Jaden Ryu"
+                    description=""
+                    imageUrl="/team_photos/jaden.png"
+                  />
+
+                  {/* Marketing Intern 15 */}
+                  <TeamMemberCard
+                    name="Kunsh Ahuja"
+                    description="Kunsh is a Marketing Intern at TMAS Academy with an interest in math, programming, and technology. He enjoys playing chess, coding, and swimming in his free time."
+                    imageUrl="/team_photos/kunsh.jpeg"
                   />
 
                 </div>
