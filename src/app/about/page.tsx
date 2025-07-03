@@ -118,31 +118,6 @@ export default function About() {
                 </h2>
                 <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
 
-                {/* Advisor 1 */}
-                  <div className="text-center">
-                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
-                      <Image
-                        src="/team_photos/ziang.jpeg"
-                        alt="Ziang Zhuang"
-                        width={96}
-                        height={96}
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <p 
-                      className="text-sm font-medium"
-                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
-                    >
-                      Ziang Zhuang
-                    </p>
-                    <p 
-                        className="text-xs max-w-xs mx-auto"
-                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
-                      >
-                        {/* Placeholder description, max 50 words */}
-                        Hi! I'm Ziang Zhuang, one of the TMAS Academy Server Moderators/Admins and an author for the AMC 8 Book. I'm a mathematics, physics, and earth science "main" and enjoy swimming and piano!
-                      </p>
-                  </div>
                 </div>
               </div>
 
@@ -453,6 +428,32 @@ export default function About() {
                       >
                         {/* Placeholder description, max 50 words */}
                         Nishanth is a rising junior at Forsyth Central High School and an Academic Writing Intern at TMAS Academy. He’s passionate about STEM education, writing, and mentorship. With experience in research, healthcare, and robotics, Nishanth strives to create clear, accessible educational content that inspires and empowers students.
+                      </p>
+                  </div>
+
+                  {/* Writing Intern 9 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/ziang.jpeg"
+                        alt="Ziang Zhuang"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Ziang Zhuang
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Hi! I'm Ziang Zhuang, one of the TMAS Academy Server Moderators/Admins and an author for the AMC 8 Book. I'm a mathematics, physics, and earth science "main" and enjoy swimming and piano!
                       </p>
                   </div>
 
@@ -777,7 +778,7 @@ export default function About() {
                         style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
                       >
                         {/* Placeholder description, max 50 words */}
-                        Vidushi Nalakonda is a marketing intern for TMAS Academy and is a rising senior from Texas. She wants to pursue CS or SDS in the future, and some of her hobbies include reading, baking, and trying new foods.
+                        Hi! I’m Akshatha Jagan. I’m from California and a rising sophomore at Mountain House High School. I love the beach, hanging out with friends, exploring new places, and engaging in entrepreneurial activities. I’m excited to be part of the TMAS marketing team and share my passion with others. 
                       </p>
                   </div>
 
@@ -803,7 +804,33 @@ export default function About() {
                         style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
                       >
                         {/* Placeholder description, max 50 words */}
-                        Vidushi Nalakonda is a marketing intern for TMAS Academy and is a rising senior from Texas. She wants to pursue CS or SDS in the future, and some of her hobbies include reading, baking, and trying new foods.
+                        Hi! My name is Ganga Nair and I'm from North Carolina. I'm very interested in Science and am excited to help contribute the TMAS's initiative!
+                      </p>
+                  </div>
+
+                  {/* Marketing Intern 13 */}
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full mx-auto mb-3 overflow-hidden shadow-lg border-2 border-gray-200 dark:border-gray-600">
+                      <Image
+                        src="/team_photos/abiramy.jpg"
+                        alt="Abiramy Radhakrishnan"
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <p 
+                      className="text-sm font-medium"
+                      style={{ color: isDark ? '#d1d5db' : '#374151' }}
+                    >
+                      Abiramy Radhakrishnan 
+                    </p>
+                    <p 
+                        className="text-xs max-w-xs mx-auto"
+                        style={{ color: isDark ? '#9ca3af' : '#6b7280' }}
+                      >
+                        {/* Placeholder description, max 50 words */}
+                        Abiramy Radhakrishnan is a high school student at Hebron with a passion for healthcare and plans to pursue a career in the field. She enjoys being part of student-led organizations, which is why she joined TMAS and took on a marketing internship to build her communication and outreach skills.
                       </p>
                   </div>
 
