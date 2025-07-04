@@ -78,8 +78,8 @@ export default function CompetitiveAdvantage() {
         {
           "@type": "ListItem",
           "position": 3, 
-          "name": "Blog",
-          "item": "https://tmasacademy.com/blog"
+          "name": "About",
+          "item": "https://tmasacademy.com/about"
         }
       ]
     }

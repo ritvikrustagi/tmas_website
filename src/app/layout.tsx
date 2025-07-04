@@ -112,7 +112,6 @@ export const metadata: Metadata = {
       'en-US': 'https://tmasacademy.com',
     },
   },
-  archives: ['https://tmasacademy.com/blog'],
   bookmarks: ['https://tmasacademy.com/books'],
 };
 
