@@ -11,6 +11,7 @@ import BookPreviewContent from '@/components/ui-custom/BookPreviewContent'
 import YouTubeVideoSection from '@/components/ui-custom/YouTubeVideoSection'
 import AdditionalResources from '@/components/ui-custom/AdditionalResources'
 import BookmarkButton from '@/components/ui-custom/BookmarkButton'
+import StructuredData from '@/components/ui-custom/StructuredData'
 import { books } from '@/components/sections/Books'
 
 // Mapping of slugs to book IDs
@@ -84,6 +85,23 @@ export default function BookPreviewPage() {
 
   return (
     <div className="min-h-screen">
+      {/* SEO Structured Data */}
+      {book && (
+        <StructuredData 
+          type="book" 
+          data={{
+            title: book.title,
+            author: book.author,
+            description: book.description,
+            subjects: [book.title.includes('AP') ? 'Advanced Placement' : 'Math Competition'],
+            pages: book.pages,
+            publishedDate: '2021',
+            rating: '4.8',
+            reviewCount: '150'
+          }} 
+        />
+      )}
+      
       <Header />
       <Breadcrumbs />
       

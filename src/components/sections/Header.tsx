@@ -28,6 +28,7 @@ const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/books', label: 'Free Books', hasDropdown: true },
+  { href: '/blog', label: 'Blog' },
   { href: '/testimonials', label: 'Success Stories' },
   { href: '/community', label: 'Community' },
   { href: '/opportunities', label: 'Join Us' },

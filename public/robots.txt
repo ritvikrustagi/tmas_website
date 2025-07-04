@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Disallow search and error pages
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+
+# Allow important resources
+Allow: /public/
+Allow: /books/
+Allow: /*.css
+Allow: /*.js
+
+# Sitemap location
+Sitemap: https://tmasacademy.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to crawlers)
+Crawl-delay: 1
