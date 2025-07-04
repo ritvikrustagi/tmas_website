@@ -42,7 +42,7 @@ export default function TeamMemberCard({ name, description, imageUrl }: TeamMemb
       {/* Animated Description */}
       <div
         className={`transition-all duration-300 ease-in-out overflow-hidden ${
-          isDescriptionVisible ? 'max-h-50 opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95'
+          isDescriptionVisible ? 'max-h-60 opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95'
         }`}
       >
         <p

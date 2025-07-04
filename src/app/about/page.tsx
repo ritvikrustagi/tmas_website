@@ -236,6 +236,13 @@ export default function About() {
                     imageUrl="/team_photos/ziang.jpeg"
                   />
 
+                   {/* Writing Intern 10 */}
+                  <TeamMemberCard
+                    name="Pranav Saravanan"
+                    description="Pranav is an aspiring innovator who is passionate about math, finance, and technology. At TMAS Academy, he creates educational content that simplifies complex topics and helps students build confidence in their learning. With experience in research, competitions, and coding, Pranav makes academic subjects more accessible and engaging."
+                    imageUrl="/team_photos/pranav.png"
+                  />
+
                 </div>
               </div>
 
@@ -261,13 +268,6 @@ export default function About() {
                     name="Mahado Abdirahman"
                     description="Mahado is thrilled to lead marketing efforts for TMAS, leveraging her creative expertise to drive education awareness and engagement, and propel TMAS forward."
                     imageUrl="/team_photos/mahado.jpg"
-                  />
-                  
-                  {/* Marketing Intern 3 */}
-                  <TeamMemberCard
-                    name="Pranav Saravanan"
-                    description="Pranav is an aspiring innovator who is passionate about math, finance, and technology. At TMAS Academy, he creates educational content that simplifies complex topics and helps students build confidence in their learning. With experience in research, competitions, and coding, Pranav makes academic subjects more accessible and engaging."
-                    imageUrl="/team_photos/pranav.png"
                   />
 
                   {/* Marketing Intern 4 */}
@@ -354,11 +354,18 @@ export default function About() {
                     imageUrl="/team_photos/jaden.png"
                   />
 
-                  {/* Marketing Intern 15 */}
+                  {/* Marketing Intern 16 */}
                   <TeamMemberCard
                     name="Kunsh Ahuja"
                     description="Kunsh is a Marketing Intern at TMAS Academy with an interest in math, programming, and technology. He enjoys playing chess, coding, and swimming in his free time."
                     imageUrl="/team_photos/kunsh.jpeg"
+                  />
+
+                  {/* Marketing Intern 17 */}
+                  <TeamMemberCard
+                    name="Jalali Hora"
+                    description="Hi! my name is Jalali Hora but I go by the name Jako. Some of my interests are basketball and weightlifting. In the time that I'm not doing those things I like to hang out with my friends and work on various projects. I'm always staying curious and open to new experiences! "
+                    imageUrl="/team_photos/jalali.png"
                   />
 
                 </div>
