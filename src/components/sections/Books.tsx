@@ -111,27 +111,27 @@ export const books = [
   {
     id: 7,
     title: 'ACE AP Biology',
-    author: 'Ritvik Rustagi',
+    author: 'Ritvik Rustagi, Amaan Shafi, Abby Trinh',
     description: 'Comprehensive coverage of AP Biology topics with detailed explanations and practice problems.',
     coverGradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
     pdfPath: '/books/ACE_AP_Biology_Book.pdf',
     badge: 'New',
     badgeColor: 'bg-purple-100 text-purple-700',
-    problems: '200+',
-    pages: '320+',
+    problems: '100+',
+    pages: '300+',
     size: '35 MB'
   },
   {
     id: 8,
     title: 'AP Statistics Review Book',
-    author: 'Ritvik Rustagi',
+    author: 'Ritvik Rustagi, Gulshan Bhalrhu, Caden Wang',
     description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.',
     coverGradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
     pdfPath: '/books/Free_AP_Statistics_Review_Book.pdf',
     badge: 'Essential',
     badgeColor: 'bg-cyan-100 text-cyan-700',
-    problems: '180+',
-    pages: '290+',
+    problems: '100+',
+    pages: '200+',
     size: '32 MB'
   },
   {
@@ -143,21 +143,21 @@ export const books = [
     pdfPath: '/books/ACE_AP_Chemistry_TMAS_Academy.pdf',
     badge: 'Comprehensive',
     badgeColor: 'bg-pink-100 text-pink-700',
-    problems: '210+',
-    pages: '340+',
+    problems: '100+',
+    pages: '400+',
     size: '38 MB'
   },
   {
     id: 10,
     title: 'AP Computer Science Principles Review Book',
-    author: 'Ritvik Rustagi',
+    author: 'Ritvik Rustagi, Ipsaan Sedhai, Aviva Iykehan',
     description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.',
     coverGradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
     pdfPath: '/books/Free_AP_Computer_Science_Principles_Review_Book.pdf',
     badge: 'Essential',
     badgeColor: 'bg-blue-100 text-blue-700',
-    problems: '160+',
-    pages: '250+',
+    problems: '100+',
+    pages: '100+',
     size: '27 MB'
   }
 ]

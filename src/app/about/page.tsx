@@ -423,7 +423,7 @@ export default function About() {
                   className="mb-6"
                   style={{ color: isDark ? '#d1d5db' : '#4b5563' }}
                 >
-                  Explore our free educational resources and join thousands of students who have improved their understanding of mathematics and physics.
+                  Explore our free educational resources and join thousands of students who have improved their understanding of mathematics and science.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Button 
