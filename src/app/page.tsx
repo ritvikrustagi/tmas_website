@@ -14,7 +14,7 @@ import CompetitiveAdvantage from '@/components/ui-custom/CompetitiveAdvantage'
 
 export const metadata: Metadata = {
   title: 'TMAS Academy - Free AP Books & Math Competition Prep | Download Now',
-  description: 'Download free AP Calculus, AP Physics, AP Chemistry, and AMC 10/12 prep books. 500+ students used our materials with 100+ achieving perfect scores. Written by CMU student Ritvik Rustagi.',
+  description: 'Download FREE AP STEM and competitive math study guides! 500+ students used our materials with several students achieving 5s on AP exams and success in contests like the AMC 10/12 and AIME. AP Calculus, Physics, Chemistry, Biology, Statistics, and more!',
   keywords: 'free AP books, AP Calculus prep, AP Physics study guide, AMC 10 practice, AIME qualification, math competition prep, free educational resources',
   openGraph: {
     title: 'TMAS Academy - Free AP Books & Math Competition Prep',

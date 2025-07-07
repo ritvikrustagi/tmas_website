@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "TMAS Academy - Free AP Books & Math Competition Prep",
-  description: "Download FREE comprehensive AP Calculus, AP Physics, AP Chemistry study guides & AMC 10/12 prep books. 500+ students used our materials with 100+ achieving 5s & AIME qualification. Written by CMU student Ritvik Rustagi.",
+  description: "Download FREE AP STEM and competitive math study guides! 500+ students used our materials with several students achieving 5s on AP exams and success in contests like the AMC 10/12 and AIME. AP Calculus, Physics, Chemistry, Biology, Statistics, and more!",
   keywords: [
     "free AP books download",
     "AP Calculus AB prep book PDF", 
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "TMAS Academy - FREE AP Books & Math Competition Prep",
-    description: "🎓 Download FREE AP study guides! 500+ students used our materials with 100+ achieving 5s & AIME qualification! ✅ AP Calculus, Physics, Chemistry ✅ Written by CMU student",
+    description: "Download FREE AP STEM and competitive math study guides! 500+ students used our materials with several students achieving 5s on AP exams and success in contests like the AMC 10/12 and AIME. AP Calculus, Physics, Chemistry, Biology, Statistics, and more!",
     url: "https://tmasacademy.com",
     siteName: "TMAS Academy",
     type: "website",
@@ -101,7 +101,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "TMAS Academy - FREE AP Books & Math Competition Prep",
-    description: "🎓 Download FREE AP study guides! 500+ students used our materials, 100+ achieved 5s. AP Calculus, Physics, Chemistry & AMC prep by CMU student.",
+    description: "Download FREE AP STEM and competitive math study guides! 500+ students used our materials with several students achieving 5s on AP exams and success in contests like the AMC 10/12 and AIME. AP Calculus, Physics, Chemistry, Biology, Statistics, and more!",
     images: ["https://tmasacademy.com/og-image.png"],
     creator: "@tmasacademy",
     site: "@tmasacademy",
