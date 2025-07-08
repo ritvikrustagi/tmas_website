@@ -218,7 +218,7 @@ export default function Books({ showAll = true }: BooksProps) {
         {!showAll ? (
           /* Infinite Slider for Homepage */
           <div className="relative overflow-hidden">
-            <div className="flex animate-infinite-scroll">
+            <div className="flex animate-infinite-scroll" style={{ minWidth: '4500px' }}>
               {/* First set of books */}
               {displayBooks.map((book) => (
                 <div key={`first-${book.id}`} className="flex-shrink-0 w-80 mx-4">
