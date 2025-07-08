@@ -19,8 +19,8 @@ const bookDropdownItems = [
   { href: '/books/ap-physics-1', label: 'ACE AP Physics 1' },
   { href: '/books/ap-physics-c', label: 'ACE AP Physics C: Mechanics' },
   { href: '/books/ap-chemistry', label: 'ACE AP Chemistry' },
-  { href: '/books/ap-computer-science', label: 'AP Computer Science Principles' },
-  { href: '/books/ap-statistics', label: 'AP Statistics Review Book' },
+  { href: '/books/ap-computer-science', label: 'ACE AP Computer Science Principles' },
+  { href: '/books/ap-statistics', label: 'ACE AP Statistics Review Book' },
   { href: '/books/ap-biology', label: 'ACE AP Biology' },
 ]
 
