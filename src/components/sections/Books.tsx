@@ -137,7 +137,7 @@ export const books = [
   {
     id: 9,
     title: 'ACE AP Chemistry',
-    author: 'Ritvik Rustagi',
+    author: 'Aditya Baisakh',
     description: 'Thorough review of AP Chemistry topics, including practice problems and exam strategies.',
     coverGradient: 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)',
     pdfPath: '/books/ACE_AP_Chemistry_TMAS_Academy.pdf',
