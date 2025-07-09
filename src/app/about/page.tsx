@@ -243,6 +243,20 @@ export default function About() {
                     imageUrl="/team_photos/pranav.png"
                   />
 
+                   {/* Writing Intern 11 */}
+                  <TeamMemberCard
+                    name="Abhiram Kothapalli"
+                    description="Hello, I’m an academic writing intern at TMAS Academy, where I focus on editing and refining books for better quality, clarity, and impact. I’m passionate about organizing complex ideas and helping knowledge flow clearly through the books I edit."
+                    imageUrl="/team_photos/abhiram.png"
+                  />
+
+                   {/* Writing Intern 11 */}
+                  <TeamMemberCard
+                    name="Alisha Fatima"
+                    description=""
+                    imageUrl="/team_photos/alisha.png"
+                  />
+
                 </div>
               </div>
 
@@ -366,6 +380,13 @@ export default function About() {
                     name="Jalali Hora"
                     description="Hi! my name is Jalali Hora but I go by the name Jako. Some of my interests are basketball and weightlifting. In the time that I'm not doing those things I like to hang out with my friends and work on various projects. I'm always staying curious and open to new experiences! "
                     imageUrl="/team_photos/jalali.png"
+                  />
+
+                  {/* Marketing Intern 18 */}
+                  <TeamMemberCard
+                    name="Neelesh Nayak"
+                    description="Neelesh is a marketing intern at TMAS Academy with a strong passion for academics and student success. A top student at Oakridge S.S. with a 99% average, he brings focus, creativity, and drive to the team. Neelesh is committed to helping students access the best free academic resources available."
+                    imageUrl="/team_photos/neelesh.png"
                   />
 
                 </div>
