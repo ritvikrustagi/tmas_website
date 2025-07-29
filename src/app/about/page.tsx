@@ -243,14 +243,28 @@ export default function About() {
                     imageUrl="/team_photos/pranav.png"
                   />
 
-                  {/* Writing Intern 11 */}
+                   {/* Writing Intern 11 */}
+                  <TeamMemberCard
+                    name="Abhiram Kothapalli"
+                    description="Hello, I’m an academic writing intern at TMAS Academy, where I focus on editing and refining books for better quality, clarity, and impact. I’m passionate about organizing complex ideas and helping knowledge flow clearly through the books I edit."
+                    imageUrl="/team_photos/abhiram.png"
+                  />
+
+                   {/* Writing Intern 12 */}
+                  <TeamMemberCard
+                    name="Alisha Fatima"
+                    description=""
+                    imageUrl="/team_photos/alisha.png"
+                  />
+
+                  {/* Writing Intern 13 */}
                   <TeamMemberCard
                     name="Jenifer"
                     description="Jenifer is a 12th-grade science student at New Indian Model School, Dubai, and an Academic Writing Intern at TMAS Academy. Recently admitted to the Harvard HMX Pre-College Program, she is an aspiring doctor passionate about biology, public health, and research. Jenifer is committed to making knowledge meaningful, accessible, and impactful for young minds in science."
                     imageUrl="/team_photos/jenifer.webp"
                   />
 
-                  {/* Writing Intern 12 */}
+                  {/* Writing Intern 14 */}
                   <TeamMemberCard
                     name="Aditya Singh"
                     description="Hey everyone! My name's Aditya and I'm excited to be an academic intern for TMAS Academy. Some small details about myself are listed below: I like to play a variety of sports and I do cross country and track. I'm interested in pursuing tech and business in college and I like to code, as well as writing, reading, and drawing."
@@ -380,6 +394,13 @@ export default function About() {
                     name="Jalali Hora"
                     description="Hi! my name is Jalali Hora but I go by the name Jako. Some of my interests are basketball and weightlifting. In the time that I'm not doing those things I like to hang out with my friends and work on various projects. I'm always staying curious and open to new experiences! "
                     imageUrl="/team_photos/jalali.png"
+                  />
+
+                  {/* Marketing Intern 18 */}
+                  <TeamMemberCard
+                    name="Neelesh Nayak"
+                    description="Neelesh is a marketing intern at TMAS Academy with a strong passion for academics and student success. A top student at Oakridge S.S. with a 99% average, he brings focus, creativity, and drive to the team. Neelesh is committed to helping students access the best free academic resources available."
+                    imageUrl="/team_photos/neelesh.png"
                   />
 
                 </div>

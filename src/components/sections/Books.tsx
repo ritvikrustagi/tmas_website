@@ -31,6 +31,32 @@ interface BooksProps {
 
 export const books = [
   {
+    id: 6,
+    title: 'AMC 10/12 Key Strategies and Formulas',
+    author: 'Ritvik Rustagi',
+    description: 'Quick reference guide with essential formulas, strategies, and tips for AMC competitions.',
+    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
+    pdfPath: '/books/AMC 10_12 Key Strategies and Formulas.pdf',
+    badge: 'Quick Reference',
+    badgeColor: 'bg-amber-100 text-amber-700',
+    problems: '50+',
+    pages: '25+',
+    size: '2.4 MB'
+  },
+  {
+    id: 5,
+    title: 'ACE The AMC 10/12',
+    author: 'Ritvik Rustagi',
+    description: 'Competition math strategies, problem-solving techniques, and practice problems for AMC success.',
+    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+    pdfPath: '/books/ACE The AMC 10_12!.pdf',
+    badge: 'Competition',
+    badgeColor: 'bg-amber-100 text-amber-700',
+    problems: '300+',
+    pages: '350+',
+    size: '37 MB'
+  },
+  {
     id: 1,
     title: 'ACE AP Calculus AB',
     author: 'Ritvik Rustagi',
@@ -83,58 +109,6 @@ export const books = [
     size: '31 MB'
   },
   {
-    id: 5,
-    title: 'ACE The AMC 10/12',
-    author: 'Ritvik Rustagi',
-    description: 'Competition math strategies, problem-solving techniques, and practice problems for AMC success.',
-    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-    pdfPath: '/books/ACE The AMC 10_12!.pdf',
-    badge: 'Competition',
-    badgeColor: 'bg-amber-100 text-amber-700',
-    problems: '300+',
-    pages: '350+',
-    size: '37 MB'
-  },
-  {
-    id: 6,
-    title: 'AMC 10/12 Key Strategies and Formulas',
-    author: 'Ritvik Rustagi',
-    description: 'Quick reference guide with essential formulas, strategies, and tips for AMC competitions.',
-    coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
-    pdfPath: '/books/AMC 10_12 Key Strategies and Formulas.pdf',
-    badge: 'Quick Reference',
-    badgeColor: 'bg-amber-100 text-amber-700',
-    problems: '50+',
-    pages: '25+',
-    size: '2.4 MB'
-  },
-  {
-    id: 7,
-    title: 'ACE AP Biology',
-    author: 'Aditya Baisakh, Amaan Shafi, Abby Trinh',
-    description: 'Comprehensive coverage of AP Biology topics with detailed explanations and practice problems.',
-    coverGradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
-    pdfPath: '/books/ACE_AP_Biology_Book.pdf',
-    badge: 'New',
-    badgeColor: 'bg-purple-100 text-purple-700',
-    problems: '100+',
-    pages: '300+',
-    size: '35 MB'
-  },
-  {
-    id: 8,
-    title: 'AP Statistics Review Book',
-    author: 'Gulshan Bhalrhu, Caden Wang',
-    description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.',
-    coverGradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
-    pdfPath: '/books/Free_AP_Statistics_Review_Book.pdf',
-    badge: 'Essential',
-    badgeColor: 'bg-cyan-100 text-cyan-700',
-    problems: '100+',
-    pages: '200+',
-    size: '32 MB'
-  },
-  {
     id: 9,
     title: 'ACE AP Chemistry',
     author: 'Aditya Baisakh',
@@ -149,8 +123,8 @@ export const books = [
   },
   {
     id: 10,
-    title: 'AP Computer Science Principles Review Book',
-    author: 'Ipsaan Sedhai, Aviva Iyerkhan',
+    title: 'ACE AP Computer Science Principles',
+    author: 'Ipsaan Sedhai, Aviva Iykehan',
     description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.',
     coverGradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
     pdfPath: '/books/Free_AP_Computer_Science_Principles_Review_Book.pdf',
@@ -159,6 +133,32 @@ export const books = [
     problems: '100+',
     pages: '100+',
     size: '27 MB'
+  },
+  {
+    id: 8,
+    title: 'ACE AP Statistics Review Book',
+    author: 'Gulshan Bhalrhu, Caden Wang',
+    description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.',
+    coverGradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
+    pdfPath: '/books/Free_AP_Statistics_Review_Book.pdf',
+    badge: 'Essential',
+    badgeColor: 'bg-cyan-100 text-cyan-700',
+    problems: '100+',
+    pages: '200+',
+    size: '32 MB'
+  },
+  {
+    id: 7,
+    title: 'ACE AP Biology',
+    author: 'Aditya Baisakh, Amaan Shafi, Abby Trinh',
+    description: 'Comprehensive coverage of AP Biology topics with detailed explanations and practice problems.',
+    coverGradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+    pdfPath: '/books/ACE_AP_Biology_Book.pdf',
+    badge: 'New',
+    badgeColor: 'bg-purple-100 text-purple-700',
+    problems: '100+',
+    pages: '300+',
+    size: '35 MB'
   }
 ]
 
@@ -216,7 +216,7 @@ export default function Books({ showAll = true }: BooksProps) {
         {!showAll ? (
           /* Infinite Slider for Homepage */
           <div className="relative overflow-hidden">
-            <div className="flex animate-infinite-scroll">
+            <div className="flex animate-infinite-scroll" style={{ minWidth: '4500px' }}>
               {/* First set of books */}
               {displayBooks.map((book) => (
                 <div key={`first-${book.id}`} className="flex-shrink-0 w-80 mx-4">
