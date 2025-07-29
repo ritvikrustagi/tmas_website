@@ -193,8 +193,7 @@ export default function Testimonials() {
             </div>
               <div className="mt-8 pt-8 border-t border-gray-200">
               <p className="text-gray-600 italic">
-                &ldquo;TMAS Academy has been a game-changer for thousands of students worldwide. 
-                Our free resources and supportive community continue to help students achieve their academic dreams.&rdquo;
+                &ldquo;TMAS Academy is part of my soul. I've nurtured this organization for the past 5 years and spent thousands of hours to make sure I can give back to society to the best of my ability. I love my team, all my students, and the free resources that we have made and will continue to make for your success.&rdquo;
               </p>
               <p className="text-sm text-gray-500 mt-2 font-medium">
                 — Ritvik Rustagi, Founder of TMAS Academy
