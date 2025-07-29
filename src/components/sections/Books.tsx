@@ -137,7 +137,7 @@ export const books = [
   {
     id: 9,
     title: 'ACE AP Chemistry',
-    author: 'Ritvik Rustagi',
+    author: 'Aditya Baisakh',
     description: 'Thorough review of AP Chemistry topics, including practice problems and exam strategies.',
     coverGradient: 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)',
     pdfPath: '/books/ACE_AP_Chemistry_TMAS_Academy.pdf',
@@ -150,7 +150,7 @@ export const books = [
   {
     id: 10,
     title: 'AP Computer Science Principles Review Book',
-    author: 'Ipsaan Sedhai, Aviva Iykehan',
+    author: 'Ipsaan Sedhai, Aviva Iyerkhan',
     description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.',
     coverGradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
     pdfPath: '/books/Free_AP_Computer_Science_Principles_Review_Book.pdf',
@@ -208,9 +208,7 @@ export default function Books({ showAll = true }: BooksProps) {
             TMAS Academy&apos;s FREE Books
           </h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Dive into our collection of meticulously crafted books, designed to align with College Board standards 
-            and provide concise, effective preparation. Each book is packed with problems and detailed solutions, 
-            and regularly updated.
+            Dive into our collection of books, aligned with the standards of national exams, for APs and math competitions. Each book is packed with problems, detailed solutions, and every topic explained carefully to ensure you master it. 
           </p>
         </AnimatedSection>
 

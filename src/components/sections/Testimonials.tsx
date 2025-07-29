@@ -165,36 +165,35 @@ export default function Testimonials() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold bg-primary-gradient bg-clip-text text-transparent mb-2">
-                  95%
+                  30000+
                 </div>
-                <div className="text-sm text-gray-600 font-medium">Students Improve Scores</div>
+                <div className="text-sm text-gray-600 font-medium">Readers</div>
               </div>
               
               <div className="text-center">
                 <div className="text-4xl font-bold bg-accent-gradient bg-clip-text text-transparent mb-2">
-                  1000+
-                </div>
-                <div className="text-sm text-gray-600 font-medium">5s on AP Exams</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-4xl font-bold bg-competition-gradient bg-clip-text text-transparent mb-2">
-                  300+
+                  100+
                 </div>
                 <div className="text-sm text-gray-600 font-medium">AIME Qualifiers</div>
               </div>
               
               <div className="text-center">
-                <div className="text-4xl font-bold text-gray-900 mb-2">
-                  4.9★
+                <div className="text-4xl font-bold bg-competition-gradient bg-clip-text text-transparent mb-2">
+                  9
                 </div>
-                <div className="text-sm text-gray-600 font-medium">Average Rating</div>
+                <div className="text-sm text-gray-600 font-medium">Free Books</div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl font-bold text-gray-900 mb-2">
+                  1600+
+                </div>
+                <div className="text-sm text-gray-600 font-medium">Members on Discord Server</div>
               </div>
             </div>
               <div className="mt-8 pt-8 border-t border-gray-200">
               <p className="text-gray-600 italic">
-                &ldquo;TMAS Academy has been a game-changer for thousands of students worldwide. 
-                Our free resources and supportive community continue to help students achieve their academic dreams.&rdquo;
+                &ldquo;TMAS Academy is part of my soul. I&apos;ve nurtured this organization for the past 5 years and spent thousands of hours to make sure I can give back to society to the best of my ability. I love my team, all my students, and the free resources that we have made and will continue to make for your success.&rdquo;
               </p>
               <p className="text-sm text-gray-500 mt-2 font-medium">
                 — Ritvik Rustagi, Founder of TMAS Academy

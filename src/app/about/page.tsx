@@ -136,7 +136,7 @@ export default function About() {
                   <TeamMemberCard
                     name="Aditya Baisakh"
                     description="Aditya hails from Baton Rouge, and is an incoming student at LSU. He wrote the AP Chemistry book and co-wrote the AP Biology book in his senior year. In his free time, he enjoys doing martial arts, coding, and playing the piano."
-                    imageUrl="/team_photos/aditya.jpg"
+                    imageUrl="/team_photos/aditya_baisakh.webp"
                   />
                   
                   {/* Author 2 */}
@@ -241,6 +241,20 @@ export default function About() {
                     name="Pranav Saravanan"
                     description="Pranav is an aspiring innovator who is passionate about math, finance, and technology. At TMAS Academy, he creates educational content that simplifies complex topics and helps students build confidence in their learning. With experience in research, competitions, and coding, Pranav makes academic subjects more accessible and engaging."
                     imageUrl="/team_photos/pranav.png"
+                  />
+
+                  {/* Writing Intern 11 */}
+                  <TeamMemberCard
+                    name="Jenifer"
+                    description="Jenifer is a 12th-grade science student at New Indian Model School, Dubai, and an Academic Writing Intern at TMAS Academy. Recently admitted to the Harvard HMX Pre-College Program, she is an aspiring doctor passionate about biology, public health, and research. Jenifer is committed to making knowledge meaningful, accessible, and impactful for young minds in science."
+                    imageUrl="/team_photos/jenifer.webp"
+                  />
+
+                  {/* Writing Intern 12 */}
+                  <TeamMemberCard
+                    name="Aditya Singh"
+                    description="Hey everyone! My name's Aditya and I'm excited to be an academic intern for TMAS Academy. Some small details about myself are listed below: I like to play a variety of sports and I do cross country and track. I'm interested in pursuing tech and business in college and I like to code, as well as writing, reading, and drawing."
+                    imageUrl="/team_photos/aditya_singh.webp"
                   />
 
                 </div>

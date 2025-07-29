@@ -141,9 +141,9 @@ export default function Hero() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
           >
             {[
-              { number: '6+', label: 'Free Books' },
+              { number: '9+', label: 'Free Books' },
               { number: '1000+', label: 'Practice Problems' },
-              { number: '500+', label: 'Discord Members' },
+              { number: '1600+', label: 'Discord Members' },
               { number: '2021', label: 'Founded' }
             ].map((stat, index) => (
               <motion.div 
