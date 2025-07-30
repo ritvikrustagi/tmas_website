@@ -259,7 +259,7 @@ export default function About() {
 
                   {/* Writing Intern 13 */}
                   <TeamMemberCard
-                    name="Jenifer"
+                    name="Jenifer Joy"
                     description="Jenifer is a 12th-grade science student at New Indian Model School, Dubai, and an Academic Writing Intern at TMAS Academy. Recently admitted to the Harvard HMX Pre-College Program, she is an aspiring doctor passionate about biology, public health, and research. Jenifer is committed to making knowledge meaningful, accessible, and impactful for young minds in science."
                     imageUrl="/team_photos/jenifer.webp"
                   />
@@ -269,6 +269,20 @@ export default function About() {
                     name="Aditya Singh"
                     description="Hey everyone! My name's Aditya and I'm excited to be an academic intern for TMAS Academy. Some small details about myself are listed below: I like to play a variety of sports and I do cross country and track. I'm interested in pursuing tech and business in college and I like to code, as well as writing, reading, and drawing."
                     imageUrl="/team_photos/aditya_singh.webp"
+                  />
+
+                  {/* Writing Intern 14 */}
+                  <TeamMemberCard
+                    name="Arjun Sharma"
+                    description="I am Arjun Sharma a high schooler an aspiring engineer passionate about education, stem, and impact. I have extensive expertise with advanced mathematics and physics and through TMAS hope to spread my knowledge to empower the rising community. In my free time I enjoy coding, playing board games, and play sports and in the past have worked on extensive research projects honing in on my skills. I am very excited to join the team!"
+                    imageUrl="/team_photos/arjun.png"
+                  />
+
+                  {/* Writing Intern 14 */}
+                  <TeamMemberCard
+                    name="Ishaan"
+                    description="Hi, I’m Ishaan, a high school student passionate about tech, leadership, and community impact. I’ve built projects like a pantry tracker app and a smart home system, won a sponsor prize at Hack the North, and have experience teaching swimming and coaching soccer. I’m actively involved in school clubs like Badmintion Club, Coding Club, and the South Asian Student Alliance, and I love exploring the intersections of AI, engineering, and entrepreneurship."
+                    imageUrl="/team_photos/Ishaan.png"
                   />
 
                 </div>
@@ -296,6 +310,13 @@ export default function About() {
                     name="Mahado Abdirahman"
                     description="Mahado is thrilled to lead marketing efforts for TMAS, leveraging her creative expertise to drive education awareness and engagement, and propel TMAS forward."
                     imageUrl="/team_photos/mahado.jpg"
+                  />
+
+                  {/* Marketing Intern 3 */}
+                <TeamMemberCard
+                    name="Aayush Bhandari"
+                    description="I’m Aayush Bhandari, a marketing lead at TMAS Academy. I am a driven 10th grader with huge passions for marketing, economics, and helping others. As a marketing lead, guide a team of interns and lead out social media campaigns, school outreach, and content creation for Instagram and LinkedIn. I also like playing and watching soccer and American football in my free time."
+                    imageUrl="/team_photos/aayush.jpg"
                   />
 
                   {/* Marketing Intern 4 */}
@@ -401,6 +422,13 @@ export default function About() {
                     name="Neelesh Nayak"
                     description="Neelesh is a marketing intern at TMAS Academy with a strong passion for academics and student success. A top student at Oakridge S.S. with a 99% average, he brings focus, creativity, and drive to the team. Neelesh is committed to helping students access the best free academic resources available."
                     imageUrl="/team_photos/neelesh.png"
+                  />
+
+                  {/* Marketing Intern 18 */}
+                  <TeamMemberCard
+                    name="Kou Xiong"
+                    description="Driven student leader passionate about finance, social impact, and innovation. Founder of GenZFinance101 and EvolvingEdenn. Experienced in investment analysis, nonprofit work, and business strategy. Merges creativity with analytics to empower peers and communities. Committed to continuous growth, leadership through service, and making complex ideas accessible and impactful."
+                    imageUrl="/team_photos/Kou.png"
                   />
 
                 </div>
