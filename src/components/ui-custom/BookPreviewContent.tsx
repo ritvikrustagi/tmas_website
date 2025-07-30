@@ -53,9 +53,6 @@ export default function BookPreviewContent({ book }: BookPreviewContentProps) {
         "• Algebraic manipulation",
         "• Squeeze theorem",
         "",
-        "Example 1.1: Find lim(x→2) (x² - 4)/(x - 2)",
-        "Solution: Factor the numerator...",
-        "",
         "Practice Problems:",
         "1. lim(x→0) sin(x)/x",
         "2. lim(x→∞) (3x² + 2x)/(x² - 1)",
@@ -63,26 +60,27 @@ export default function BookPreviewContent({ book }: BookPreviewContentProps) {
       ]
     },
     2: { // Calculus BC
-      title: "Chapter 1: Advanced Integration Techniques",
+      title: "Unit 9: Parametric, Polar, and Vector-Valued Functions",
       content: [
-        "1.1 Integration by Parts",
-        "• Formula: ∫u dv = uv - ∫v du",
-        "• Choosing u and dv",
-        "• Repeated integration by parts",
+        "9.1 Defining and Differentiating Parametric Equations",
+        "• Understanding parametric equations as functions of time",
+        "• First derivatives: dy/dx = (dy/dt) / (dx/dt)",
         "",
-        "1.2 Trigonometric Integrals",
-        "• Powers of sine and cosine",
-        "• Trigonometric substitution",
+        "9.2 Second Derivatives of Parametric Equations",
+        "• Chain rule application: d²y/dx² = d/dt(dy/dx) ÷ dx/dt",
         "",
-        "Example 1.1: ∫x e^x dx",
-        "Let u = x, dv = e^x dx",
-        "Then du = dx, v = e^x",
-        "∫x e^x dx = x e^x - ∫e^x dx = x e^x - e^x + C",
+        "9.3 Finding Arc Lengths of Curves Given by Parametric Equations",
+        "• Using arc length formula: ∫ √[(dx/dt)² + (dy/dt)²] dt",
+        "",
+        "9.4 Derivatives of Vector-Valued Functions",
+        "• Velocity and acceleration vectors",
+        "• Component-wise differentiation of vector functions",
         "",
         "Practice Problems:",
-        "1. ∫x ln(x) dx",
-        "2. ∫x² sin(x) dx",
-        "3. ∫e^x cos(x) dx"
+        "1. Given x = t² + 1 and y = ln(t), find dy/dx.",
+        "2. Determine d²y/dx² for x = sin(t), y = t².",
+        "3. Find the arc length of the curve x = t, y = t² from t = 0 to t = 2.",
+        "4. Given r(t) = ⟨cos(t), sin(t), t⟩, find the velocity and acceleration vectors."
       ]
     },
     3: { // Physics 1
@@ -109,26 +107,27 @@ export default function BookPreviewContent({ book }: BookPreviewContentProps) {
         "3. Two-body collision analysis"
       ]
     },
-    4: { // Physics C
-      title: "Chapter 1: Advanced Mechanics",
+    4: {
+      // Physics
+      title: "Chapter 1: Kinematics",
       content: [
-        "1.1 Lagrangian Mechanics",
-        "• Generalized coordinates",
-        "• Lagrangian formulation",
-        "• Euler-Lagrange equations",
+        "1.0 Scalars and Vectors",
+        "• Scalars: magnitude only (e.g., distance, speed)",
+        "• Vectors: magnitude and direction (e.g., displacement, velocity)",
         "",
-        "1.2 Conservation Laws",
-        "• Energy conservation",
-        "• Momentum conservation",
-        "• Angular momentum",
+        "1.1 Scalar Quantities in Depth",
+        "• Distance (d): total length of path traveled",
+        "• Speed (s): rate of change of distance, s = d / t",
         "",
-        "Example 1.1: Simple pendulum analysis",
-        "Using Lagrangian approach...",
+        "1.2 Vector Quantities in Depth",
+        "• Displacement (Δx): change in position, includes direction",
+        "• Velocity (v): displacement over time, v = Δx / t",
+        "• Acceleration (a): change in velocity over time, a = Δv / t",
         "",
-        "Practice Problems:",
-        "1. Double pendulum system",
-        "2. Central force problems",
-        "3. Rigid body rotation"
+        "Key Concepts:",
+        "• Distinction between scalar and vector quantities",
+        "• Kinematic variables and their definitions",
+        "• Using directionality in motion analysis"
       ]
     },
     5: { // AMC
@@ -179,20 +178,33 @@ export default function BookPreviewContent({ book }: BookPreviewContentProps) {
     7: { // Biology
       title: "Chapter 1: Cell Structure and Function",
       content: [
-        "1.1 Prokaryotic vs Eukaryotic Cells",
-        "• Cell membrane structure",
-        "• Organelle functions",
-        "• DNA organization",
+        "1.1 Structure of Water and Hydrogen Bonding",
+        "• Polarity and hydrogen bonding",
+        "• Cohesion, adhesion, and surface tension",
         "",
-        "1.2 Cellular Processes",
-        "• Photosynthesis overview",
-        "• Cellular respiration",
-        "• Protein synthesis",
+        "1.2 Elements of Life",
+        "• Essential elements (CHNOPS)",
+        "• Carbon’s ability to form large, complex molecules",
+        "",
+        "1.3 Introduction to Biological Macromolecules",
+        "• Monomers and polymers",
+        "• Dehydration synthesis and hydrolysis",
+        "",
+        "1.4 Properties of Biological Macromolecules",
+        "• Structure and function of carbohydrates, lipids, and proteins",
+        "",
+        "1.5 Structure and Function of Biological Macromolecules",
+        "• R-group properties and protein folding",
+        "",
+        "1.6 Nucleic Acids",
+        "• DNA and RNA structure",
+        "• Nucleotide components and base pairing rules",
         "",
         "Key Concepts:",
-        "• Membrane transport mechanisms",
-        "• Enzyme kinetics",
-        "• Cell cycle regulation"
+        "• Hydrogen bonding in water",
+        "• Macromolecule structure-function relationships",
+        "• Polymer formation and breakdown",
+        "• Information storage in nucleic acids"
       ]
     },
     8: { // Statistics
@@ -214,44 +226,54 @@ export default function BookPreviewContent({ book }: BookPreviewContentProps) {
         "3. Distribution shape analysis"
       ]
     },
-    9: { // Chemistry
-      title: "Chapter 1: Atomic Structure",
+    9: {
+      // Chemistry
+      title: "Unit 1: Atomic Structure and Properties",
       content: [
-        "1.1 Atomic Theory",
-        "• Electron configuration",
-        "• Periodic trends",
-        "• Chemical bonding",
+        "1.1 Moles and Molar Mass",
+        "• Using Avogadro’s number and molar mass to convert between particles and grams",
+        "• Mole concept in chemical calculations",
         "",
-        "1.2 Molecular Structure",
-        "• VSEPR theory",
-        "• Hybridization",
-        "• Intermolecular forces",
+        "1.2 Mass Spectrometry of Elements",
+        "• Interpretation of mass spectra",
+        "• Determining isotopic composition and average atomic mass",
         "",
-        "Key Reactions:",
-        "• Acid-base reactions",
-        "• Redox reactions",
-        "• Equilibrium principles"
+        "1.3 Elemental Composition of Pure Substances",
+        "• Empirical and molecular formulas",
+        "• Using percent composition in analysis",
+        "",
+        "Key Concepts:",
+        "• Mole conversions",
+        "• Mass spectrometry and isotopes",
+        "• Empirical vs. molecular formulas"
       ]
     },
-    10: { // Computer Science
-      title: "Chapter 1: Programming Fundamentals",
-      content: [
-        "1.1 Algorithm Design",
-        "• Problem decomposition",
-        "• Pseudocode writing",
-        "• Algorithm efficiency",
-        "",
-        "1.2 Data Structures",
-        "• Arrays and lists",
-        "• Stacks and queues",
-        "• Hash tables",
-        "",
-        "Programming Concepts:",
-        "• Variables and data types",
-        "• Control structures",
-        "• Function design"
-      ]
-    }
+    10: {
+        // APCSA
+        title: "Unit 3: Algorithms and Programming",
+        content: [
+          "3.1 Data Types",
+          "• int, double, boolean, and String",
+          "",
+          "3.2 Boolean Values",
+          "• true/false logic and expressions",
+          "",
+          "3.3 Logic Gates",
+          "• AND, OR, NOT operations in programming",
+          "",
+          "3.4 Strings",
+          "• String methods and concatenation",
+          "",
+          "3.5 Evaluating Conditionals",
+          "• if, else if, else statements",
+          "",
+          "Key Concepts:",
+          "• Control flow with conditionals and loops",
+          "• Logical and comparison operators",
+          "• Algorithm design and efficiency"
+        ]
+      }
+
   }
 
   const currentPreview = previewContent[book.id as keyof typeof previewContent] || {
