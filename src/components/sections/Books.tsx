@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -36,6 +37,7 @@ export const books = [
     author: 'Ritvik Rustagi',
     description: 'Quick reference guide with essential formulas, strategies, and tips for AMC competitions.',
     coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
+    coverImage: '/books/covers/AMC_Key_Formulas_cover.png',
     pdfPath: '/books/AMC 10_12 Key Strategies and Formulas.pdf',
     badge: 'Quick Reference',
     badgeColor: 'bg-amber-100 text-amber-700',
@@ -49,6 +51,7 @@ export const books = [
     author: 'Ritvik Rustagi',
     description: 'Competition math strategies, problem-solving techniques, and practice problems for AMC success.',
     coverGradient: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+    coverImage: '/books/covers/ACE_AMC_Book_cover.png',
     pdfPath: '/books/ACE The AMC 10_12!.pdf',
     badge: 'Competition',
     badgeColor: 'bg-amber-100 text-amber-700',
@@ -62,6 +65,7 @@ export const books = [
     author: 'Ritvik Rustagi',
     description: 'Comprehensive coverage of AP Calculus AB topics with detailed explanations and practice problems.',
     coverGradient: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+    coverImage: '/books/covers/AP_Calc_AB_cover.png',
     pdfPath: '/books/ACE_AP_Calculus_AB_by_RitvikRustagi.pdf',
     badge: 'Popular',
     badgeColor: 'bg-blue-100 text-blue-700',
@@ -75,6 +79,7 @@ export const books = [
     author: 'Ritvik Rustagi',
     description: 'Master advanced calculus topics including series, parametric equations, and polar coordinates.',
     coverGradient: 'linear-gradient(135deg, #3b82f6 0%, #1e40af 100%)',
+    coverImage: '/books/covers/AP_Calc_BC_cover.png',
     pdfPath: '/books/ACE_AP_Calculus_BC_by_RitvikRustagi.pdf',
     badge: 'Advanced',
     badgeColor: 'bg-blue-100 text-blue-700',
@@ -88,6 +93,7 @@ export const books = [
     author: 'Ritvik Rustagi',
     description: 'Fundamental physics concepts, problem-solving strategies, and exam preparation techniques.',
     coverGradient: 'linear-gradient(135deg, #10b981 0%, #047857 100%)',
+    coverImage: '/books/covers/AP_Physics_1_cover.png',
     pdfPath: '/books/ACE_AP_Physics_1_by_RitvikRustagi.pdf',
     badge: 'Essential',
     badgeColor: 'bg-emerald-100 text-emerald-700',
@@ -101,6 +107,7 @@ export const books = [
     author: 'Ritvik Rustagi',
     description: 'Calculus-based mechanics covering kinematics, dynamics, energy, and momentum.',
     coverGradient: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+    coverImage: '/books/covers/AP_Physics_C_cover.png',
     pdfPath: '/books/ACE_AP_Physics_C_Mech_by_RitvikRustagi.pdf',
     badge: 'Advanced',
     badgeColor: 'bg-emerald-100 text-emerald-700',
@@ -114,6 +121,7 @@ export const books = [
     author: 'Aditya Baisakh',
     description: 'Thorough review of AP Chemistry topics, including practice problems and exam strategies.',
     coverGradient: 'linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)',
+    coverImage: '/books/covers/AP_Chemistry_cover.png',
     pdfPath: '/books/ACE_AP_Chemistry_TMAS_Academy.pdf',
     badge: 'Comprehensive',
     badgeColor: 'bg-pink-100 text-pink-700',
@@ -127,6 +135,7 @@ export const books = [
     author: 'Ipsaan Sedhai, Aviva Iykehan',
     description: 'Best AP Computer Science Principles study guide with clear explanations and exam-focused practice.',
     coverGradient: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
+    coverImage: '/books/covers/AP_CSP_cover.png',
     pdfPath: '/books/Free_AP_Computer_Science_Principles_Review_Book.pdf',
     badge: 'Essential',
     badgeColor: 'bg-blue-100 text-blue-700',
@@ -140,6 +149,7 @@ export const books = [
     author: 'Gulshan Bhalrhu, Caden Wang',
     description: 'Best AP Statistics study guide with comprehensive coverage of statistical concepts and exam preparation.',
     coverGradient: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
+    coverImage: '/books/covers/AP_Statistics_cover.png',
     pdfPath: '/books/Free_AP_Statistics_Review_Book.pdf',
     badge: 'Essential',
     badgeColor: 'bg-cyan-100 text-cyan-700',
@@ -153,6 +163,7 @@ export const books = [
     author: 'Aditya Baisakh, Amaan Shafi, Abby Trinh',
     description: 'Comprehensive coverage of AP Biology topics with detailed explanations and practice problems.',
     coverGradient: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+    coverImage: '/books/covers/AP_Biology_cover.png',
     pdfPath: '/books/ACE_AP_Biology_Book.pdf',
     badge: 'New',
     badgeColor: 'bg-purple-100 text-purple-700',
@@ -223,21 +234,13 @@ export default function Books({ showAll = true }: BooksProps) {
                   <Card className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200 h-full">
                     <CardHeader>
                       {/* Book Cover Image */}
-                      <div className="w-full h-48 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden">
-                        <div 
-                          className="w-full h-full flex flex-col items-center justify-between p-4 text-white font-bold shadow-lg rounded-lg"
-                          style={{
-                            background: book.coverGradient,
-                          }}
-                        >
-                          <div className="text-xs font-semibold opacity-80 tracking-wider">TMAS ACADEMY</div>
-                          <div className="text-center flex-1 flex items-center">
-                            <div className="text-lg font-bold leading-tight text-shadow-lg">
-                              {book.title.replace('ACE ', '').split(' ').slice(0, 3).join(' ')}
-                            </div>
-                          </div>
-                          <div className="text-xs opacity-90">{book.author.split(' ').slice(0, 2).join(' ')}</div>
-                        </div>
+                      <div className="w-full h-72 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden relative">
+                        <Image
+                          src={book.coverImage}
+                          alt={book.title}
+                          fill
+                          className="rounded-lg object-cover"
+                        />
                       </div>
                       
                       <div className="flex items-start justify-between">
@@ -313,21 +316,13 @@ export default function Books({ showAll = true }: BooksProps) {
                   <Card className="glass-card hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer border border-gray-200 h-full">
                     <CardHeader>
                       {/* Book Cover Image */}
-                      <div className="w-full h-48 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden">
-                        <div 
-                          className="w-full h-full flex flex-col items-center justify-between p-4 text-white font-bold shadow-lg rounded-lg"
-                          style={{
-                            background: book.coverGradient,
-                          }}
-                        >
-                          <div className="text-xs font-semibold opacity-80 tracking-wider">TMAS ACADEMY</div>
-                          <div className="text-center flex-1 flex items-center">
-                            <div className="text-lg font-bold leading-tight text-shadow-lg">
-                              {book.title.replace('ACE ', '').split(' ').slice(0, 3).join(' ')}
-                            </div>
-                          </div>
-                          <div className="text-xs opacity-90">{book.author.split(' ').slice(0, 2).join(' ')}</div>
-                        </div>
+                      <div className="w-full h-72 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden relative">
+                        <Image
+                          src={book.coverImage}
+                          alt={book.title}
+                          fill
+                          className="rounded-lg object-cover"
+                        />
                       </div>
                       
                       <div className="flex items-start justify-between">
@@ -408,21 +403,13 @@ export default function Books({ showAll = true }: BooksProps) {
               >
                 <CardHeader>
                   {/* Book Cover Image */}
-                  <div className="w-full h-48 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden">
-                    <div 
-                      className="w-full h-full flex flex-col items-center justify-between p-4 text-white font-bold shadow-lg rounded-lg"
-                      style={{
-                        background: book.coverGradient,
-                      }}
-                    >
-                      <div className="text-xs font-semibold opacity-80 tracking-wider">TMAS ACADEMY</div>
-                      <div className="text-center flex-1 flex items-center">
-                        <div className="text-lg font-bold leading-tight text-shadow-lg">
-                          {book.title.replace('ACE ', '').split(' ').slice(0, 3).join(' ')}
-                        </div>
-                      </div>
-                      <div className="text-xs opacity-90">{book.author.split(' ').slice(0, 2).join(' ')}</div>
-                    </div>
+                  <div className="w-full h-72 bg-gray-50 rounded-lg flex items-center justify-center mb-4 border border-dashed border-gray-300 group-hover:border-gray-400 transition-colors overflow-hidden relative">
+                    <Image
+                      src={book.coverImage}
+                      alt={book.title}
+                      fill
+                      className="rounded-lg object-cover"
+                    />
                   </div>
                   
                   <div className="flex items-start justify-between">

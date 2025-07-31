@@ -4,6 +4,7 @@ import React from 'react'
 import { Download, ExternalLink, Eye } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTheme } from '@/contexts/ThemeContext'
+import Image from 'next/image'
 
 interface BookPreviewContentProps {
   book: {
@@ -12,6 +13,7 @@ interface BookPreviewContentProps {
     author: string
     description: string
     coverGradient: string
+    coverImage: string
     pdfPath: string
     badge: string
     badgeColor: string
@@ -292,11 +294,13 @@ export default function BookPreviewContent({ book }: BookPreviewContentProps) {
         }}
       >
         <div className="flex items-center gap-4">
-          <div 
-            className="w-12 h-16 rounded-lg shadow-lg flex items-center justify-center text-white text-xs font-bold"
-            style={{ background: book.coverGradient }}
-          >
-            {book.title.split(' ').slice(1, 3).join(' ')}
+          <div className="w-12 h-16 rounded-lg shadow-lg overflow-hidden relative">
+            <Image
+              src={book.coverImage}
+              alt={book.title}
+              fill
+              className="object-cover"
+            />
           </div>
           <div>
             <h2 
